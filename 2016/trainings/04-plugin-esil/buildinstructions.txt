@@ -1,0 +1,65 @@
+The requeriments for training are a Linux OS with:
+ 
+ - radare2 
+ - radare2-extras
+ - radare2-regressions
+ - git
+ - GCC
+ - mingw-w64
+ - python2 + pip
+ - nodejs + npm
+ - r2pipe for python and nodejs
+ - baleful plugin
+ - bochs 2.6.8
+ - X server for bochs 
+
+And windows 7 x64 Virtual Machine:
+ - Create a VM with windows 7 x64 pro 
+ - Create a account with Administrator rights
+ - open a elevated cmd.exe and execute bcdedit.exe -set TESTSIGING ON
+ - Install release version of radare2 x64
+
+Quick guide for ubuntu
+=======================
+
+apt-get install git
+apt-get install mingw-w64
+apt-get install vim tmux
+apt-get install python-pip nodejs npm
+git clone http://github.com/radare/radare2
+git clone http://github.com/radare/radare2-extras
+git clone http://github.com/radare/radare2-regressions
+radare2/sys/install.sh
+cd radare2-extras
+./configure
+cd baleful
+make
+r2 -hh (to get the plugin dir)
+cp -f asm/asm_baleful.so anal/anal_baleful.so ~/.config/radare2/plugins/
+pip install r2pipe
+npm install syspipe r2pipe
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+Compile BOCHS 2.6.8
+=====================
+
+sudo apt-get install libsdl1.2-dev
+sudo apt-get install libx11-dev
+sudo apt-get install libncurses-dev
+wget http://bochs.sourceforge.net/svn-snapshot/bochs-20160830.tar.gz
+tar -zxvf bochs-20160830.tar.gz 
+cd bochs-20160830/
+./configure --with-x11 --with-sdl --with-term  --with-nogui --enable-sb16 --enable-ne2000 --enable-all-optimizations --enable-cpu-level=6 --enable-x86-64 --enable-vmx=2 --enable-pci --enable-clgd54xx --enable-voodoo --enable-usb --enable-usb-ohci --enable-usb-xhci --enable-es1370 --enable-e1000 --enable-show-ips --disable-readline --enable-x86-debugger --enable-debugger 
+make
+su sudo
+make install
+
+TEST1:
+======
+cd ~/taller/demobochs
+r2 -d bochs:///usr/bin/bochs#stage4.bxrc
+
+TEST2:
+======
+cd ~/taller/demobaleful
+r2 -a baleful -e io.cache=true vm.cifrada.code
