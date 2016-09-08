@@ -1,0 +1,3 @@
+#!/usr/bin/rarun2
+program=./simplebof
+arg1=@80@A

