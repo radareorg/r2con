@@ -1,0 +1,1719 @@
+Archive member included because of file (symbol)
+
+build-crumbuino128/libcore.a(wiring.c.o)
+                              build-crumbuino128/Test.ino.o (delay)
+build-crumbuino128/libcore.a(wiring_digital.c.o)
+                              build-crumbuino128/Test.ino.o (pinMode)
+build-crumbuino128/libcore.a(WString.cpp.o)
+                              build-crumbuino128/Test.ino.o (_ZN6StringD1Ev)
+build-crumbuino128/libcore.a(Print.cpp.o)
+                              build-crumbuino128/Test.ino.o (_ZN5Print5printEPKc)
+build-crumbuino128/libcore.a(Stream.cpp.o)
+                              build-crumbuino128/Test.ino.o (_ZN6Stream10setTimeoutEm)
+build-crumbuino128/libcore.a(main.cpp.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o (main)
+build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                              build-crumbuino128/Test.ino.o (_ZN14HardwareSerial9availableEv)
+build-crumbuino128/libcore.a(realloc.c.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (realloc)
+build-crumbuino128/libcore.a(malloc.c.o)
+                              build-crumbuino128/libcore.a(realloc.c.o) (malloc)
+build-crumbuino128/libcore.a(new.cpp.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__cxa_pure_virtual)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(atol.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (atol)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(exit.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o (exit)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(isspace.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (isspace)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(tolower.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (tolower)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(toupper.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (toupper)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strdup.o)
+                              build-crumbuino128/Test.ino.o (strdup)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok.o)
+                              build-crumbuino128/Test.ino.o (strtok)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memccpy.o)
+                              build-crumbuino128/Test.ino.o (memccpy)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memcpy.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (memcpy)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memmove.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (memmove)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memset.o)
+                              build-crumbuino128/Test.ino.o (memset)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcat.o)
+                              build-crumbuino128/Test.ino.o (strcat)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strchr.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (strchr)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcmp.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (strcmp)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcpy.o)
+                              build-crumbuino128/Test.ino.o (strcpy)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcat.o)
+                              build-crumbuino128/Test.ino.o (strlcat)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcpy.o)
+                              build-crumbuino128/Test.ino.o (strlcpy)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlwr.o)
+                              build-crumbuino128/Test.ino.o (strlwr)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncat.o)
+                              build-crumbuino128/Test.ino.o (strncat)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncmp.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (strncmp)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncpy.o)
+                              build-crumbuino128/Test.ino.o (strncpy)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrchr.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (strrchr)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrev.o)
+                              build-crumbuino128/Test.ino.o (strrev)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strstr.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (strstr)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok_r.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok.o) (strtok_r)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strupr.o)
+                              build-crumbuino128/Test.ino.o (strupr)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (__itoa)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa_ncheck.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa.o) (__itoa_ncheck)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (__ltoa)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa_ncheck.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa.o) (__ltoa_ncheck)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsi10.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(atol.o) (__mulsi_const_10)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (__ultoa)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_ncheck.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa.o) (__ultoa_ncheck)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa.o)
+                              build-crumbuino128/libcore.a(WString.cpp.o) (__utoa)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa_ncheck.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa.o) (__utoa_ncheck)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fgetc.o)
+                              build-crumbuino128/Test.ino.o (fgetc)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fprintf.o)
+                              build-crumbuino128/Test.ino.o (fprintf)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputc.o)
+                              build-crumbuino128/Test.ino.o (fputc)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputs.o)
+                              build-crumbuino128/Test.ino.o (fputs)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fwrite.o)
+                              build-crumbuino128/Test.ino.o (fwrite)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(iob.o)
+                              build-crumbuino128/Test.ino.o (__iob)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(printf.o)
+                              build-crumbuino128/Test.ino.o (printf)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(puts.o)
+                              build-crumbuino128/Test.ino.o (puts)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(snprintf.o)
+                              build-crumbuino128/Test.ino.o (snprintf)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(sprintf.o)
+                              build-crumbuino128/Test.ino.o (sprintf)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__subsf3)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3.o) (__addsf3x)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cmpsf2.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__ltsf2)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__divsf3)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3x.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3.o) (__divsf3x)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixsfsi.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__fixsfsi)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixunssfsi.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__fixunssfsi)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(floatsisf.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__floatunsisf)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_cmp.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cmpsf2.o) (__fp_cmp)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_inf.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o) (__fp_inf)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_nan.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o) (__fp_nan)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscA.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o) (__fp_pscA)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscB.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o) (__fp_pscB)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_round.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3.o) (__fp_round)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_split3.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o) (__fp_split3)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_zero.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o) (__fp_zero)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(gesf2.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__gtsf2)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__mulsf3)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3x.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3.o) (__mulsf3x)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(unordsf2.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__unordsf2)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fprintf.o) (vfprintf)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cty_isfalse.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(isspace.o) (__ctype_isfalse)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen_P)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (__ultoa_invert)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+                              build-crumbuino128/libcore.a(Print.cpp.o) (__udivmodsi4)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(exit.o) (_exit)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+                              build-crumbuino128/Test.ino.o (__do_copy_data)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+                              build-crumbuino128/libcore.a(wiring.c.o) (__do_clear_bss)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+                              build-crumbuino128/libcore.a(HardwareSerial.cpp.o) (__do_global_ctors)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+                              build-crumbuino128/libcore.a(Stream.cpp.o) (__muluhisi3)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+                              /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o) (__tablejump_elpm__)
+/usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+                              /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o) (__umulhisi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+__brkval            0x2               build-crumbuino128/libcore.a(malloc.c.o)
+__flp               0x2               build-crumbuino128/libcore.a(malloc.c.o)
+__iob               0x6               /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(iob.o)
+
+Discarded input sections
+
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(WString.cpp.o)
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(WString.cpp.o)
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(WString.cpp.o)
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(WString.cpp.o)
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(Print.cpp.o)
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(Print.cpp.o)
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+ .group         0x00000000        0x8 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800100         0x0000ff00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+Address of section .siminfo set to 0x900000
+LOAD build-crumbuino128/Test.ino.o
+LOAD build-crumbuino128/libcore.a
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libm.a
+START GROUP
+LOAD /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libm.a
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x40b8
+ *(.vectors)
+ .vectors       0x00000000       0x8c /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000008c                . = ALIGN (0x2)
+                0x0000008c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000008c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000008c                __trampolines_end = .
+ *(.progmem*)
+ .progmem.data.digital_pin_to_timer_PGM
+                0x0000008c       0x33 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x0000008c                digital_pin_to_timer_PGM
+ .progmem.data.digital_pin_to_bit_mask_PGM
+                0x000000bf       0x33 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x000000bf                digital_pin_to_bit_mask_PGM
+ .progmem.data.digital_pin_to_port_PGM
+                0x000000f2       0x33 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x000000f2                digital_pin_to_port_PGM
+ .progmem.data.port_to_input_PGM
+                0x00000125       0x10 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x00000125                port_to_input_PGM
+ .progmem.data.port_to_output_PGM
+                0x00000135       0x10 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x00000135                port_to_output_PGM
+ .progmem.data.port_to_mode_PGM
+                0x00000145       0x10 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x00000145                port_to_mode_PGM
+                0x00000156                . = ALIGN (0x2)
+ *fill*         0x00000155        0x1 
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000156                __ctors_start = .
+ *(.ctors)
+ .ctors         0x00000156        0x2 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00000158                __ctors_end = .
+                0x00000158                __dtors_start = .
+ *(.dtors)
+                0x00000158                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000158        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+                0x00000158                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000158        0xc /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000164       0x1a /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+                0x00000164                __do_copy_data
+ .init4         0x0000017e       0x10 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+                0x0000017e                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ .init6         0x0000018e       0x20 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+                0x0000018e                __do_global_ctors
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000001ae        0x8 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+ *(.init9)
+ *(.text)
+ .text          0x000001b6        0x4 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+                0x000001b6                __vector_22
+                0x000001b6                __vector_28
+                0x000001b6                __vector_1
+                0x000001b6                __vector_32
+                0x000001b6                __vector_34
+                0x000001b6                __vector_24
+                0x000001b6                __vector_12
+                0x000001b6                __bad_interrupt
+                0x000001b6                __vector_6
+                0x000001b6                __vector_3
+                0x000001b6                __vector_23
+                0x000001b6                __vector_25
+                0x000001b6                __vector_11
+                0x000001b6                __vector_13
+                0x000001b6                __vector_17
+                0x000001b6                __vector_7
+                0x000001b6                __vector_27
+                0x000001b6                __vector_5
+                0x000001b6                __vector_33
+                0x000001b6                __vector_4
+                0x000001b6                __vector_9
+                0x000001b6                __vector_2
+                0x000001b6                __vector_21
+                0x000001b6                __vector_15
+                0x000001b6                __vector_29
+                0x000001b6                __vector_8
+                0x000001b6                __vector_26
+                0x000001b6                __vector_14
+                0x000001b6                __vector_10
+                0x000001b6                __vector_20
+ .text          0x000001ba        0x0 build-crumbuino128/Test.ino.o
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(wiring.c.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(wiring_digital.c.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(WString.cpp.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(Print.cpp.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(Stream.cpp.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(main.cpp.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(realloc.c.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(malloc.c.o)
+ .text          0x000001ba        0x0 build-crumbuino128/libcore.a(new.cpp.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(atol.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(exit.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(isspace.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(tolower.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(toupper.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strdup.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memccpy.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memcpy.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memmove.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memset.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcat.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strchr.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcmp.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcpy.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcat.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcpy.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlwr.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncat.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncmp.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncpy.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrchr.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrev.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strstr.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok_r.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strupr.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa_ncheck.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa_ncheck.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsi10.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_ncheck.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa_ncheck.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fgetc.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fprintf.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputc.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputs.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fwrite.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(iob.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(printf.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(puts.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(snprintf.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(sprintf.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cmpsf2.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3x.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixsfsi.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixunssfsi.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(floatsisf.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_cmp.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_inf.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_nan.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscA.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscB.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_round.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_split3.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_zero.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(gesf2.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3x.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(unordsf2.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cty_isfalse.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .text          0x000001ba        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+                0x000001ba                . = ALIGN (0x2)
+ *(.text.*)
+ .text._Z5test1v
+                0x000001ba      0x214 build-crumbuino128/Test.ino.o
+                0x000001ba                _Z5test1v
+ .text.loop     0x000003ce        0x2 build-crumbuino128/Test.ino.o
+                0x000003ce                loop
+ .text.setup    0x000003d0      0x15c build-crumbuino128/Test.ino.o
+                0x000003d0                setup
+ .text.__vector_16
+                0x0000052c       0x94 build-crumbuino128/libcore.a(wiring.c.o)
+                0x0000052c                __vector_16
+ .text.millis   0x000005c0       0x18 build-crumbuino128/libcore.a(wiring.c.o)
+                0x000005c0                millis
+ .text.micros   0x000005d8       0x48 build-crumbuino128/libcore.a(wiring.c.o)
+                0x000005d8                micros
+ .text.delay    0x00000620       0x4c build-crumbuino128/libcore.a(wiring.c.o)
+                0x00000620                delay
+ .text.delayMicroseconds
+                0x0000066c       0x16 build-crumbuino128/libcore.a(wiring.c.o)
+                0x0000066c                delayMicroseconds
+ .text.init     0x00000682       0x54 build-crumbuino128/libcore.a(wiring.c.o)
+                0x00000682                init
+ .text.turnOffPWM
+                0x000006d6       0x4e build-crumbuino128/libcore.a(wiring_digital.c.o)
+ .text.pinMode  0x00000724       0x72 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x00000724                pinMode
+ .text.digitalWrite
+                0x00000796       0x6c build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x00000796                digitalWrite
+ .text.digitalRead
+                0x00000802       0x52 build-crumbuino128/libcore.a(wiring_digital.c.o)
+                0x00000802                digitalRead
+ .text.itoa     0x00000854        0x4 build-crumbuino128/libcore.a(WString.cpp.o)
+ .text.ltoa     0x00000858        0x4 build-crumbuino128/libcore.a(WString.cpp.o)
+ .text.utoa     0x0000085c        0x4 build-crumbuino128/libcore.a(WString.cpp.o)
+ .text.ultoa    0x00000860        0x4 build-crumbuino128/libcore.a(WString.cpp.o)
+ .text._ZN6StringD2Ev
+                0x00000864        0xa build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000864                _ZN6StringD1Ev
+                0x00000864                _ZN6StringD2Ev
+ .text._ZN6String10invalidateEv
+                0x0000086e       0x24 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x0000086e                _ZN6String10invalidateEv
+ .text._ZN6String12changeBufferEj
+                0x00000892       0x34 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000892                _ZN6String12changeBufferEj
+ .text._ZN6String7reserveEj
+                0x000008c6       0x38 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000008c6                _ZN6String7reserveEj
+ .text._ZN6String4copyEPKcj
+                0x000008fe       0x42 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000008fe                _ZN6String4copyEPKcj
+ .text._ZN6StringC2EPKc
+                0x00000940       0x2e build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000940                _ZN6StringC1EPKc
+                0x00000940                _ZN6StringC2EPKc
+ .text._ZN6StringaSERKS_
+                0x0000096e       0x2e build-crumbuino128/libcore.a(WString.cpp.o)
+                0x0000096e                _ZN6StringaSERKS_
+ .text._ZN6StringC2ERKS_
+                0x0000099c       0x14 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x0000099c                _ZN6StringC1ERKS_
+                0x0000099c                _ZN6StringC2ERKS_
+ .text._ZN6StringaSEPKc
+                0x000009b0       0x30 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000009b0                _ZN6StringaSEPKc
+ .text._ZN6StringC2Ec
+                0x000009e0       0x32 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000009e0                _ZN6StringC2Ec
+                0x000009e0                _ZN6StringC1Ec
+ .text._ZN6StringC2Ehh
+                0x00000a12       0x5c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000a12                _ZN6StringC1Ehh
+                0x00000a12                _ZN6StringC2Ehh
+ .text._ZN6StringC2Eih
+                0x00000a6e       0x5a build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000a6e                _ZN6StringC1Eih
+                0x00000a6e                _ZN6StringC2Eih
+ .text._ZN6StringC2Ejh
+                0x00000ac8       0x5a build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000ac8                _ZN6StringC2Ejh
+                0x00000ac8                _ZN6StringC1Ejh
+ .text._ZN6StringC2Elh
+                0x00000b22       0x5c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000b22                _ZN6StringC1Elh
+                0x00000b22                _ZN6StringC2Elh
+ .text._ZN6StringC2Emh
+                0x00000b7e       0x5c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000b7e                _ZN6StringC2Emh
+                0x00000b7e                _ZN6StringC1Emh
+ .text._ZN6String6concatEPKcj
+                0x00000bda       0x58 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000bda                _ZN6String6concatEPKcj
+ .text._ZN6String6concatERKS_
+                0x00000c32        0xe build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000c32                _ZN6String6concatERKS_
+ .text._ZN6String6concatEPKc
+                0x00000c40       0x20 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000c40                _ZN6String6concatEPKc
+ .text._ZN6String6concatEc
+                0x00000c60       0x26 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000c60                _ZN6String6concatEc
+ .text._ZN6String6concatEh
+                0x00000c86       0x5a build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000c86                _ZN6String6concatEh
+ .text._ZN6String6concatEi
+                0x00000ce0       0x64 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000ce0                _ZN6String6concatEi
+ .text._ZN6String6concatEj
+                0x00000d44       0x5e build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000d44                _ZN6String6concatEj
+ .text._ZN6String6concatEl
+                0x00000da2       0x66 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000da2                _ZN6String6concatEl
+ .text._ZN6String6concatEm
+                0x00000e08       0x66 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000e08                _ZN6String6concatEm
+ .text._ZplRK15StringSumHelperRK6String
+                0x00000e6e       0x26 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000e6e                _ZplRK15StringSumHelperRK6String
+ .text._ZplRK15StringSumHelperPKc
+                0x00000e94       0x34 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000e94                _ZplRK15StringSumHelperPKc
+ .text._ZplRK15StringSumHelperc
+                0x00000ec8       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000ec8                _ZplRK15StringSumHelperc
+ .text._ZplRK15StringSumHelperh
+                0x00000ee4       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000ee4                _ZplRK15StringSumHelperh
+ .text._ZplRK15StringSumHelperi
+                0x00000f00       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000f00                _ZplRK15StringSumHelperi
+ .text._ZplRK15StringSumHelperj
+                0x00000f1c       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000f1c                _ZplRK15StringSumHelperj
+ .text._ZplRK15StringSumHelperl
+                0x00000f38       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000f38                _ZplRK15StringSumHelperl
+ .text._ZplRK15StringSumHelperm
+                0x00000f54       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000f54                _ZplRK15StringSumHelperm
+ .text._ZNK6String9compareToERKS_
+                0x00000f70       0x60 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000f70                _ZNK6String9compareToERKS_
+ .text._ZNK6String6equalsERKS_
+                0x00000fd0       0x26 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000fd0                _ZNK6String6equalsERKS_
+ .text._ZNK6String6equalsEPKc
+                0x00000ff6       0x3e build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00000ff6                _ZNK6String6equalsEPKc
+ .text._ZNK6StringltERKS_
+                0x00001034        0xe build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001034                _ZNK6StringltERKS_
+ .text._ZNK6StringgtERKS_
+                0x00001042       0x12 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001042                _ZNK6StringgtERKS_
+ .text._ZNK6StringleERKS_
+                0x00001054       0x12 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001054                _ZNK6StringleERKS_
+ .text._ZNK6StringgeERKS_
+                0x00001066       0x10 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001066                _ZNK6StringgeERKS_
+ .text._ZNK6String16equalsIgnoreCaseERKS_
+                0x00001076       0x72 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001076                _ZNK6String16equalsIgnoreCaseERKS_
+ .text._ZNK6String10startsWithERKS_j
+                0x000010e8       0x48 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000010e8                _ZNK6String10startsWithERKS_j
+ .text._ZNK6String10startsWithERKS_
+                0x00001130       0x1e build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001130                _ZNK6String10startsWithERKS_
+ .text._ZNK6String8endsWithERKS_
+                0x0000114e       0x42 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x0000114e                _ZNK6String8endsWithERKS_
+ .text._ZN6String9setCharAtEjc
+                0x00001190       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001190                _ZN6String9setCharAtEjc
+ .text._ZN6StringixEj
+                0x000011ac       0x24 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000011ac                _ZN6StringixEj
+ .text._ZNK6StringixEj
+                0x000011d0       0x22 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000011d0                _ZNK6StringixEj
+ .text._ZNK6String6charAtEj
+                0x000011f2        0x4 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000011f2                _ZNK6String6charAtEj
+ .text._ZNK6String8getBytesEPhjj
+                0x000011f6       0x54 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000011f6                _ZNK6String8getBytesEPhjj
+ .text._ZNK6String7indexOfEcj
+                0x0000124a       0x38 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x0000124a                _ZNK6String7indexOfEcj
+ .text._ZNK6String7indexOfEc
+                0x00001282        0x8 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001282                _ZNK6String7indexOfEc
+ .text._ZNK6String7indexOfERKS_j
+                0x0000128a       0x38 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x0000128a                _ZNK6String7indexOfERKS_j
+ .text._ZNK6String7indexOfERKS_
+                0x000012c2        0x8 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000012c2                _ZNK6String7indexOfERKS_
+ .text._ZNK6String11lastIndexOfEcj
+                0x000012ca       0x66 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000012ca                _ZNK6String11lastIndexOfEcj
+ .text._ZNK6String11lastIndexOfEc
+                0x00001330        0xe build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001330                _ZNK6String11lastIndexOfEc
+ .text._ZNK6String11lastIndexOfERKS_j
+                0x0000133e       0x9c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x0000133e                _ZNK6String11lastIndexOfERKS_j
+ .text._ZNK6String11lastIndexOfERKS_
+                0x000013da       0x14 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000013da                _ZNK6String11lastIndexOfERKS_
+ .text._ZNK6String9substringEjj
+                0x000013ee       0x8a build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000013ee                _ZNK6String9substringEjj
+ .text._ZNK6String9substringEj
+                0x00001478       0x18 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001478                _ZNK6String9substringEj
+ .text._ZN6String7replaceEcc
+                0x00001490       0x1c build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001490                _ZN6String7replaceEcc
+ .text._ZN6String7replaceERKS_S1_
+                0x000014ac      0x1e6 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000014ac                _ZN6String7replaceERKS_S1_
+ .text._ZN6String11toLowerCaseEv
+                0x00001692       0x28 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x00001692                _ZN6String11toLowerCaseEv
+ .text._ZN6String11toUpperCaseEv
+                0x000016ba       0x28 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000016ba                _ZN6String11toUpperCaseEv
+ .text._ZN6String4trimEv
+                0x000016e2       0xbe build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000016e2                _ZN6String4trimEv
+ .text._ZNK6String5toIntEv
+                0x000017a0       0x16 build-crumbuino128/libcore.a(WString.cpp.o)
+                0x000017a0                _ZNK6String5toIntEv
+ .text._ZN5Print5writeEPKhj
+                0x000017b6       0x50 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x000017b6                _ZN5Print5writeEPKhj
+ .text._ZN5Print5writeEPKc
+                0x00001806       0x2c build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001806                _ZN5Print5writeEPKc
+ .text._ZN5Print5printEPK19__FlashStringHelper
+                0x00001832       0x4a build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001832                _ZN5Print5printEPK19__FlashStringHelper
+ .text._ZN5Print5printERK6String
+                0x0000187c       0x6a build-crumbuino128/libcore.a(Print.cpp.o)
+                0x0000187c                _ZN5Print5printERK6String
+ .text._ZN5Print5printEPKc
+                0x000018e6        0x4 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x000018e6                _ZN5Print5printEPKc
+ .text._ZN5Print5printEc
+                0x000018ea        0xe build-crumbuino128/libcore.a(Print.cpp.o)
+                0x000018ea                _ZN5Print5printEc
+ .text._ZN5Print5printERK9Printable
+                0x000018f8       0x14 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x000018f8                _ZN5Print5printERK9Printable
+ .text._ZN5Print7printlnEv
+                0x0000190c       0x28 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x0000190c                _ZN5Print7printlnEv
+ .text._ZN5Print7printlnEPK19__FlashStringHelper
+                0x00001934       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001934                _ZN5Print7printlnEPK19__FlashStringHelper
+ .text._ZN5Print7printlnERK6String
+                0x00001958       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001958                _ZN5Print7printlnERK6String
+ .text._ZN5Print7printlnEPKc
+                0x0000197c       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x0000197c                _ZN5Print7printlnEPKc
+ .text._ZN5Print7printlnEc
+                0x000019a0       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x000019a0                _ZN5Print7printlnEc
+ .text._ZN5Print7printlnERK9Printable
+                0x000019c4       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x000019c4                _ZN5Print7printlnERK9Printable
+ .text._ZN5Print11printNumberEmh
+                0x000019e8       0xb2 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x000019e8                _ZN5Print11printNumberEmh
+ .text._ZN5Print5printEli
+                0x00001a9a       0x94 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001a9a                _ZN5Print5printEli
+ .text._ZN5Print5printEii
+                0x00001b2e       0x10 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001b2e                _ZN5Print5printEii
+ .text._ZN5Print7printlnEii
+                0x00001b3e       0x30 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001b3e                _ZN5Print7printlnEii
+ .text._ZN5Print7printlnEli
+                0x00001b6e       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001b6e                _ZN5Print7printlnEli
+ .text._ZN5Print5printEmi
+                0x00001b92       0x1a build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001b92                _ZN5Print5printEmi
+ .text._ZN5Print5printEhi
+                0x00001bac        0xe build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001bac                _ZN5Print5printEhi
+ .text._ZN5Print7printlnEhi
+                0x00001bba       0x2e build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001bba                _ZN5Print7printlnEhi
+ .text._ZN5Print5printEji
+                0x00001be8        0xc build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001be8                _ZN5Print5printEji
+ .text._ZN5Print7printlnEji
+                0x00001bf4       0x2c build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001bf4                _ZN5Print7printlnEji
+ .text._ZN5Print7printlnEmi
+                0x00001c20       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001c20                _ZN5Print7printlnEmi
+ .text._ZN5Print10printFloatEdh
+                0x00001c44      0x1d6 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001c44                _ZN5Print10printFloatEdh
+ .text._ZN5Print5printEdi
+                0x00001e1a        0x4 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001e1a                _ZN5Print5printEdi
+ .text._ZN5Print7printlnEdi
+                0x00001e1e       0x24 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00001e1e                _ZN5Print7printlnEdi
+ .text._ZN6Stream9timedReadEv
+                0x00001e42       0x5c build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00001e42                _ZN6Stream9timedReadEv
+ .text._ZN6Stream9timedPeekEv
+                0x00001e9e       0x5c build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00001e9e                _ZN6Stream9timedPeekEv
+ .text._ZN6Stream13peekNextDigitEv
+                0x00001efa       0x38 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00001efa                _ZN6Stream13peekNextDigitEv
+ .text._ZN6Stream10setTimeoutEm
+                0x00001f32        0xc build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00001f32                _ZN6Stream10setTimeoutEm
+ .text._ZN6Stream9findUntilEPcjS0_j
+                0x00001f3e       0xc6 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00001f3e                _ZN6Stream9findUntilEPcjS0_j
+ .text._ZN6Stream4findEPcj
+                0x00002004       0x16 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00002004                _ZN6Stream4findEPcj
+ .text._ZN6Stream9findUntilEPcS0_
+                0x0000201a       0x34 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x0000201a                _ZN6Stream9findUntilEPcS0_
+ .text._ZN6Stream4findEPc
+                0x0000204e        0x8 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x0000204e                _ZN6Stream4findEPc
+ .text._ZN6Stream8parseIntEc
+                0x00002056       0xde build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00002056                _ZN6Stream8parseIntEc
+ .text._ZN6Stream8parseIntEv
+                0x00002134        0x6 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00002134                _ZN6Stream8parseIntEv
+ .text._ZN6Stream10parseFloatEc
+                0x0000213a      0x11e build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x0000213a                _ZN6Stream10parseFloatEc
+ .text._ZN6Stream10parseFloatEv
+                0x00002258        0x6 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00002258                _ZN6Stream10parseFloatEv
+ .text._ZN6Stream9readBytesEPcj
+                0x0000225e       0x46 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x0000225e                _ZN6Stream9readBytesEPcj
+ .text._ZN6Stream14readBytesUntilEcPcj
+                0x000022a4       0x6a build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x000022a4                _ZN6Stream14readBytesUntilEcPcj
+ .text._ZN6Stream10readStringEv
+                0x0000230e       0x34 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x0000230e                _ZN6Stream10readStringEv
+ .text._ZN6Stream15readStringUntilEc
+                0x00002342       0x50 build-crumbuino128/libcore.a(Stream.cpp.o)
+                0x00002342                _ZN6Stream15readStringUntilEc
+ .text.startup.main
+                0x00002392       0x1a build-crumbuino128/libcore.a(main.cpp.o)
+                0x00002392                main
+ .text._ZN14HardwareSerial9availableEv
+                0x000023ac       0x20 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000023ac                _ZN14HardwareSerial9availableEv
+ .text._ZN14HardwareSerial4peekEv
+                0x000023cc       0x32 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000023cc                _ZN14HardwareSerial4peekEv
+ .text._ZN14HardwareSerial4readEv
+                0x000023fe       0x40 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000023fe                _ZN14HardwareSerial4readEv
+ .text._ZN14HardwareSerial5flushEv
+                0x0000243e       0x16 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x0000243e                _ZN14HardwareSerial5flushEv
+ .text._ZN14HardwareSerial5writeEh
+                0x00002454       0x7a build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00002454                _ZN14HardwareSerial5writeEh
+ .text._Z11serialEventv
+                0x000024ce        0x2 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000024ce                _Z11serialEventv
+ .text.__vector_18
+                0x000024d0       0x74 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000024d0                __vector_18
+ .text._Z12serialEvent1v
+                0x00002544        0x2 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00002544                _Z12serialEvent1v
+ .text.__vector_30
+                0x00002546       0x7c build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00002546                __vector_30
+ .text._Z14serialEventRunv
+                0x000025c2       0x22 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000025c2                _Z14serialEventRunv
+ .text.__vector_19
+                0x000025e4       0x74 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000025e4                __vector_19
+ .text.__vector_31
+                0x00002658       0x7e build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00002658                __vector_31
+ .text._ZN14HardwareSerialC2EP11ring_bufferS1_PVhS3_S3_S3_S3_S3_hhhhh
+                0x000026d6       0x88 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x000026d6                _ZN14HardwareSerialC1EP11ring_bufferS1_PVhS3_S3_S3_S3_S3_hhhhh
+                0x000026d6                _ZN14HardwareSerialC2EP11ring_bufferS1_PVhS3_S3_S3_S3_S3_hhhhh
+ .text._ZN14HardwareSerial5beginEm
+                0x0000275e      0x102 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x0000275e                _ZN14HardwareSerial5beginEm
+ .text._ZN14HardwareSerial5beginEmh
+                0x00002860      0x10c build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00002860                _ZN14HardwareSerial5beginEmh
+ .text._ZN14HardwareSerial3endEv
+                0x0000296c       0xaa build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x0000296c                _ZN14HardwareSerial3endEv
+ .text._ZN14HardwareSerialcvbEv
+                0x00002a16        0x4 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00002a16                _ZN14HardwareSerialcvbEv
+ .text.startup._GLOBAL__sub_I_rx_buffer
+                0x00002a1a      0x140 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+ .text.avr-libc
+                0x00002b5a      0x1d2 build-crumbuino128/libcore.a(realloc.c.o)
+                0x00002b5a                realloc
+ .text.avr-libc
+                0x00002d2c      0x24e build-crumbuino128/libcore.a(malloc.c.o)
+                0x00002d2c                malloc
+                0x00002e5c                free
+ .text._Znwj    0x00002f7a        0x4 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002f7a                _Znwj
+ .text._Znaj    0x00002f7e        0x4 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002f7e                _Znaj
+ .text._ZdlPv   0x00002f82        0x4 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002f82                _ZdlPv
+ .text._ZdaPv   0x00002f86        0x4 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002f86                _ZdaPv
+ .text.__cxa_guard_acquire
+                0x00002f8a       0x12 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002f8a                __cxa_guard_acquire
+ .text.__cxa_guard_release
+                0x00002f9c        0x8 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002f9c                __cxa_guard_release
+ .text.__cxa_guard_abort
+                0x00002fa4        0x2 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002fa4                __cxa_guard_abort
+ .text.__cxa_pure_virtual
+                0x00002fa6        0x2 build-crumbuino128/libcore.a(new.cpp.o)
+                0x00002fa6                __cxa_pure_virtual
+ .text.avr-libc
+                0x00002fa8       0x4e /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(atol.o)
+                0x00002fa8                atol
+ .text.avr-libc
+                0x00002ff6        0x6 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(exit.o)
+                0x00002ff6                exit
+ .text.avr-libc
+                0x00002ffc       0x10 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(isspace.o)
+                0x00002ffc                isspace
+ .text.avr-libc
+                0x0000300c       0x10 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(tolower.o)
+                0x0000300c                tolower
+ .text.avr-libc
+                0x0000301c       0x10 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(toupper.o)
+                0x0000301c                toupper
+ .text.avr-libc
+                0x0000302c       0x34 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strdup.o)
+                0x0000302c                strdup
+ .text.avr-libc
+                0x00003060        0x8 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok.o)
+                0x00003060                strtok
+ .text.avr-libc
+                0x00003068       0x1c /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memccpy.o)
+                0x00003068                memccpy
+ .text.avr-libc
+                0x00003084       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memcpy.o)
+                0x00003084                memcpy
+ .text.avr-libc
+                0x00003096       0x24 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memmove.o)
+                0x00003096                memmove
+ .text.avr-libc
+                0x000030ba        0xe /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memset.o)
+                0x000030ba                memset
+ .text.avr-libc
+                0x000030c8       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcat.o)
+                0x000030c8                strcat
+ .text.avr-libc
+                0x000030de       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strchr.o)
+                0x000030de                strchr
+ .text.avr-libc
+                0x000030f4       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcmp.o)
+                0x000030f4                strcmp
+ .text.avr-libc
+                0x00003106        0xe /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcpy.o)
+                0x00003106                strcpy
+ .text.avr-libc
+                0x00003114       0x3e /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcat.o)
+                0x00003114                strlcat
+ .text.avr-libc
+                0x00003152       0x28 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcpy.o)
+                0x00003152                strlcpy
+ .text.avr-libc
+                0x0000317a       0x14 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlwr.o)
+                0x0000317a                strlwr
+ .text.avr-libc
+                0x0000318e       0x20 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncat.o)
+                0x0000318e                strncat
+ .text.avr-libc
+                0x000031ae       0x1c /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncmp.o)
+                0x000031ae                strncmp
+ .text.avr-libc
+                0x000031ca       0x1e /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncpy.o)
+                0x000031ca                strncpy
+ .text.avr-libc
+                0x000031e8       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrchr.o)
+                0x000031e8                strrchr
+ .text.avr-libc
+                0x000031fe       0x20 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrev.o)
+                0x000031fe                strrev
+ .text.avr-libc
+                0x0000321e       0x34 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strstr.o)
+                0x0000321e                strstr
+ .text.avr-libc
+                0x00003252       0x4e /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok_r.o)
+                0x00003252                strtok_r
+ .text.avr-libc
+                0x000032a0       0x14 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strupr.o)
+                0x000032a0                strupr
+ .text.avr-libc
+                0x000032b4       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa.o)
+                0x000032b4                itoa
+                0x000032b4                __itoa
+ .text.avr-libc
+                0x000032ca       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa_ncheck.o)
+                0x000032ca                __itoa_ncheck
+ .text.avr-libc
+                0x000032e0       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa.o)
+                0x000032e0                __ltoa
+                0x000032e0                ltoa
+ .text.avr-libc
+                0x000032f6       0x1e /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa_ncheck.o)
+                0x000032f6                __ltoa_ncheck
+ .text.avr-libc
+                0x00003314       0x2a /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsi10.o)
+                0x00003314                __mulsi_const_10
+ .text.avr-libc
+                0x0000333e       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa.o)
+                0x0000333e                __ultoa
+                0x0000333e                ultoa
+ .text.avr-libc
+                0x00003354       0x44 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_ncheck.o)
+                0x00003354                __ultoa_ncheck
+                0x00003356                __ultoa_common
+ .text.avr-libc
+                0x00003398       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa.o)
+                0x00003398                utoa
+                0x00003398                __utoa
+ .text.avr-libc
+                0x000033ae       0x34 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa_ncheck.o)
+                0x000033ae                __utoa_ncheck
+                0x000033b0                __utoa_common
+ .text.avr-libc
+                0x000033e2       0x7c /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fgetc.o)
+                0x000033e2                fgetc
+ .text.avr-libc
+                0x0000345e       0x20 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fprintf.o)
+                0x0000345e                fprintf
+ .text.avr-libc
+                0x0000347e       0x64 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputc.o)
+                0x0000347e                fputc
+ .text.avr-libc
+                0x000034e2       0x56 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputs.o)
+                0x000034e2                fputs
+ .text.avr-libc
+                0x00003538       0x84 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fwrite.o)
+                0x00003538                fwrite
+ .text.avr-libc
+                0x000035bc       0x24 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(printf.o)
+                0x000035bc                printf
+ .text.avr-libc
+                0x000035e0       0x5a /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(puts.o)
+                0x000035e0                puts
+ .text.avr-libc
+                0x0000363a       0x7a /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(snprintf.o)
+                0x0000363a                snprintf
+ .text.avr-libc
+                0x000036b4       0x5e /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(sprintf.o)
+                0x000036b4                sprintf
+ .text.avr-libc.fplib
+                0x00003712        0xa /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3.o)
+                0x00003712                __subsf3
+                0x00003714                __addsf3
+ .text.avr-libc.fplib
+                0x0000371c       0xc0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o)
+                0x00003736                __addsf3x
+ .text.avr-libc.fplib
+                0x000037dc        0x8 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cmpsf2.o)
+                0x000037dc                __lesf2
+                0x000037dc                __nesf2
+                0x000037dc                __eqsf2
+                0x000037dc                __cmpsf2
+                0x000037dc                __ltsf2
+ .text.avr-libc.fplib
+                0x000037e4        0x4 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3.o)
+                0x000037e4                __divsf3
+ .text.avr-libc.fplib
+                0x000037e8       0xcc /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3x.o)
+                0x000037fe                __divsf3x
+                0x00003802                __divsf3_pse
+ .text.avr-libc.fplib
+                0x000038b4        0xa /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixsfsi.o)
+                0x000038b4                __fixsfsi
+ .text.avr-libc.fplib
+                0x000038be       0x58 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixunssfsi.o)
+                0x000038be                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00003916       0x7a /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(floatsisf.o)
+                0x00003916                __floatunsisf
+                0x0000391a                __floatsisf
+ .text.avr-libc.fplib
+                0x00003990       0x48 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_cmp.o)
+                0x00003990                __fp_cmp
+ .text.avr-libc.fplib
+                0x000039d8        0xc /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_inf.o)
+                0x000039d8                __fp_inf
+ .text.avr-libc.fplib
+                0x000039e4        0x6 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_nan.o)
+                0x000039e4                __fp_nan
+ .text.avr-libc.fplib
+                0x000039ea        0xe /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscA.o)
+                0x000039ea                __fp_pscA
+ .text.avr-libc.fplib
+                0x000039f8        0xe /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscB.o)
+                0x000039f8                __fp_pscB
+ .text.avr-libc.fplib
+                0x00003a06       0x22 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_round.o)
+                0x00003a06                __fp_round
+ .text.avr-libc.fplib
+                0x00003a28       0x44 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_split3.o)
+                0x00003a28                __fp_split3
+                0x00003a38                __fp_splitA
+ .text.avr-libc.fplib
+                0x00003a6c        0xe /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_zero.o)
+                0x00003a6c                __fp_zero
+                0x00003a6e                __fp_szero
+ .text.avr-libc.fplib
+                0x00003a7a        0x8 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(gesf2.o)
+                0x00003a7a                __gtsf2
+                0x00003a7a                __gesf2
+ .text.avr-libc.fplib
+                0x00003a82        0x4 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3.o)
+                0x00003a82                __mulsf3
+ .text.avr-libc.fplib
+                0x00003a86       0xc2 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3x.o)
+                0x00003a9a                __mulsf3x
+                0x00003a9e                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x00003b48        0x8 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(unordsf2.o)
+                0x00003b48                __unordsf2
+ .text.avr-libc
+                0x00003b50      0x3f6 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+                0x00003b50                vfprintf
+ .text.avr-libc
+                0x00003f46        0x6 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cty_isfalse.o)
+                0x00003f46                __ctype_isfalse
+                0x00003f4a                __ctype_istrue
+ .text.avr-libc
+                0x00003f4c       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                0x00003f4c                strnlen_P
+ .text.avr-libc
+                0x00003f62       0x16 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen.o)
+                0x00003f62                strnlen
+ .text.avr-libc
+                0x00003f78       0xbc /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x00003f78                __ultoa_invert
+ .text.libgcc.mul
+                0x00004034        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x00004034       0x44 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+                0x00004034                __udivmodsi4
+ .text.libgcc   0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc   0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text.libgcc.div
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text.libgcc   0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text.libgcc.prologue
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text.libgcc.builtins
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text.libgcc.fmul
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text.libgcc.fixed
+                0x00004078        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .text.libgcc.mul
+                0x00004078       0x16 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+                0x00004078                __muluhisi3
+ .text.libgcc.div
+                0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc.mul
+                0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .text.libgcc.div
+                0x0000408e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .text.libgcc   0x0000408e        0x8 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+                0x0000408e                __tablejump_elpm__
+ .text.libgcc.prologue
+                0x00004096        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .text.libgcc.builtins
+                0x00004096        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .text.libgcc.fmul
+                0x00004096        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .text.libgcc.fixed
+                0x00004096        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .text.libgcc.mul
+                0x00004096       0x1e /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+                0x00004096                __umulhisi3
+ .text.libgcc.div
+                0x000040b4        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x000040b4        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x000040b4        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x000040b4        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x000040b4        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x000040b4        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+                0x000040b4                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000040b4        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+                0x000040b4                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000040b4        0x4 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000040b8                _etext = .
+
+.data           0x00800100       0x6c load address 0x000040b8
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+ .data          0x00800100        0x0 build-crumbuino128/Test.ino.o
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(wiring.c.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(wiring_digital.c.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(WString.cpp.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(Print.cpp.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(Stream.cpp.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(main.cpp.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(realloc.c.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(malloc.c.o)
+ .data          0x00800100        0x0 build-crumbuino128/libcore.a(new.cpp.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(atol.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(exit.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(isspace.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(tolower.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(toupper.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strdup.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memccpy.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memcpy.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memmove.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memset.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcat.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strchr.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcmp.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcpy.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcat.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcpy.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlwr.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncat.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncmp.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncpy.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrchr.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrev.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strstr.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok_r.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strupr.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa_ncheck.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa_ncheck.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsi10.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_ncheck.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa_ncheck.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fgetc.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fprintf.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputc.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputs.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fwrite.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(iob.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(printf.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(puts.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(snprintf.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(sprintf.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cmpsf2.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3x.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixsfsi.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixunssfsi.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(floatsisf.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_cmp.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_inf.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_nan.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscA.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscB.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_round.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_split3.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_zero.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(gesf2.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3x.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(unordsf2.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cty_isfalse.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ *(.data*)
+ .data.__malloc_heap_end
+                0x00800100        0x2 build-crumbuino128/libcore.a(malloc.c.o)
+                0x00800100                __malloc_heap_end
+ .data.__malloc_heap_start
+                0x00800102        0x2 build-crumbuino128/libcore.a(malloc.c.o)
+                0x00800102                __malloc_heap_start
+ .data.__malloc_margin
+                0x00800104        0x2 build-crumbuino128/libcore.a(malloc.c.o)
+                0x00800104                __malloc_margin
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00800106       0x2f build-crumbuino128/Test.ino.o
+ .rodata.str1.1
+                0x00000000       0x2f build-crumbuino128/libcore.a(WString.cpp.o)
+                                  0x1 (size before relaxing)
+ .rodata.str1.1
+                0x00800135        0xe build-crumbuino128/libcore.a(Print.cpp.o)
+ .rodata._ZTV5Print
+                0x00800143        0x8 build-crumbuino128/libcore.a(Print.cpp.o)
+                0x00800143                _ZTV5Print
+ .rodata.str1.1
+                0x00000000        0x1 build-crumbuino128/libcore.a(Stream.cpp.o)
+ .rodata._ZTV6Stream
+                0x0080014b       0x10 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x0080014b                _ZTV6Stream
+ .rodata._ZTV14HardwareSerial
+                0x0080015b       0x10 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x0080015b                _ZTV14HardwareSerial
+ *(.gnu.linkonce.d*)
+                0x0080016c                . = ALIGN (0x2)
+ *fill*         0x0080016b        0x1 
+                0x0080016c                _edata = .
+                0x0080016c                PROVIDE (__data_end, .)
+
+.bss            0x0080016c      0x16a
+                0x0080016c                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080016c        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/crtm128.o
+ .bss           0x0080016c        0x0 build-crumbuino128/Test.ino.o
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(wiring.c.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(wiring_digital.c.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(WString.cpp.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(Print.cpp.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(Stream.cpp.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(main.cpp.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(realloc.c.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(malloc.c.o)
+ .bss           0x0080016c        0x0 build-crumbuino128/libcore.a(new.cpp.o)
+ .bss           0x0080016c        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(atol.o)
+ .bss           0x0080016c        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(exit.o)
+ .bss           0x0080016c        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(isspace.o)
+ .bss           0x0080016c        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(tolower.o)
+ .bss           0x0080016c        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(toupper.o)
+ .bss           0x0080016c        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strdup.o)
+ .bss           0x0080016c        0x2 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memccpy.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memcpy.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memmove.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(memset.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcat.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strchr.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcmp.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strcpy.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcat.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlcpy.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strlwr.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncat.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncmp.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strncpy.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrchr.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strrev.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strstr.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok_r.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strupr.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(itoa_ncheck.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ltoa_ncheck.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsi10.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_ncheck.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(utoa_ncheck.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fgetc.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fprintf.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputc.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputs.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fwrite.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(iob.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(printf.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(puts.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(snprintf.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(sprintf.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(addsf3x.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cmpsf2.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(divsf3x.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixsfsi.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fixunssfsi.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(floatsisf.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_cmp.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_inf.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_nan.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscA.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_pscB.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_round.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_split3.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fp_zero.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(gesf2.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(mulsf3x.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(unordsf2.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(cty_isfalse.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strnlen.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_udivmodsi4.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_exit.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_copy_data.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_clear_bss.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_ctors.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_muluhisi3.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_tablejump_elpm.o)
+ .bss           0x0080016e        0x0 /usr/lib/gcc/avr/4.8.1/avr51/libgcc.a(_umulhisi3.o)
+ *(.bss*)
+ .bss.timer0_fract
+                0x0080016e        0x1 build-crumbuino128/libcore.a(wiring.c.o)
+ .bss.timer0_millis
+                0x0080016f        0x4 build-crumbuino128/libcore.a(wiring.c.o)
+                0x0080016f                timer0_millis
+ .bss.timer0_overflow_count
+                0x00800173        0x4 build-crumbuino128/libcore.a(wiring.c.o)
+                0x00800173                timer0_overflow_count
+ .bss._ZZN6StringixEjE19dummy_writable_char
+                0x00800177        0x1 build-crumbuino128/libcore.a(WString.cpp.o)
+ .bss.Serial1   0x00800178       0x22 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00800178                Serial1
+ .bss.Serial    0x0080019a       0x22 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x0080019a                Serial
+ .bss.tx_buffer1
+                0x008001bc       0x44 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x008001bc                tx_buffer1
+ .bss.rx_buffer1
+                0x00800200       0x44 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00800200                rx_buffer1
+ .bss.tx_buffer
+                0x00800244       0x44 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00800244                tx_buffer
+ .bss.rx_buffer
+                0x00800288       0x44 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+                0x00800288                rx_buffer
+ *(COMMON)
+ COMMON         0x008002cc        0x4 build-crumbuino128/libcore.a(malloc.c.o)
+                0x008002cc                __brkval
+                0x008002ce                __flp
+ COMMON         0x008002d0        0x6 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(iob.o)
+                0x008002d0                __iob
+                0x008002d6                PROVIDE (__bss_end, .)
+                0x000040b8                __data_load_start = LOADADDR (.data)
+                0x00004124                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008002d6        0x0
+                0x008002d6                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008002d6                PROVIDE (__noinit_end, .)
+                0x008002d6                _end = .
+                0x008002d6                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x11
+ *(.comment)
+ .comment       0x00000000       0x11 build-crumbuino128/Test.ino.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(wiring.c.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(wiring_digital.c.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(WString.cpp.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(Print.cpp.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(Stream.cpp.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(main.cpp.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(HardwareSerial.cpp.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(realloc.c.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(malloc.c.o)
+ .comment       0x00000000       0x12 build-crumbuino128/libcore.a(new.cpp.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strdup.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(strtok.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fgetc.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fprintf.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputc.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fputs.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(fwrite.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(iob.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(printf.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(puts.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(snprintf.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(sprintf.o)
+ .comment       0x00000000       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(build-crumbuino128/arduino.elf elf32-avr)
+LOAD linker stubs
+
+.siminfo        0x00900000        0x0
