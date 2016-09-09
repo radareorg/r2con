@@ -1,0 +1,124 @@
+--- src/cmd/main.cpp	2015-11-21 13:25:38.280328243 +0100
++++ src/cmd/main.cpp	2015-11-21 13:24:04.039657863 +0100
+@@ -58,9 +58,23 @@
+ #include "helper.h"
+ #include "specialmem.h"
+ #include "irqsystem.h"
++#include "avrdevice_impl.h"
++#include "serialrx.h"
++#include "serialtx.h"
++#include "simulavr_info.h"
++
+ 
+ #include "dumpargs.h"
+ 
++std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems) {
++    std::stringstream ss(s);
++    std::string item;
++    while (std::getline(ss, item, delim)) {
++        elems.push_back(item);
++    }
++    return elems;
++}
++
+ const char *SplitOffsetFile(const char *arg,
+                             const char *name,
+                             int base,
+@@ -90,11 +104,40 @@
+     return end;
+ }
+ 
++void addUARTBinding(AvrDevice *core, vector<string> v, bool rx){
++    if(v.size() == 3){
++
++        Net *net = new Net();
++
++		if(rx){
++		  SerialRxFile *serial = new SerialRxFile(v[0].c_str());
++          serial->SetBaudRate(atoi(v[2].c_str()));
++          net->Add(core->GetPin(v[1].c_str()));
++          net->Add(serial->GetPin("rx"));
++		}else{
++		  SerialTxFile *serial = new SerialTxFile(v[0].c_str());
++          serial->SetBaudRate(atoi(v[2].c_str()));
++          net->Add(core->GetPin(v[1].c_str()));
++          net->Add(serial->GetPin("tx"));
++		}
++
++    }else if(v.size() > 0){
++        cerr << "Incorrect number of arguments for UART port specification." << endl;
++        exit(1);
++    }
++}
++
+ const char Usage[] = 
+     "AVR-Simulator Version " VERSION "\n"
+     "-u                    run with user interface for external pin\n"
+     "                      handling at port 7777\n"
+     "-f --file <name>      load elf-file <name> for simulation in simulated target\n"
++    "-x --rx0 <name,port,baud> \n"
++    "                      bind uart0 rx port to file/stdio using baud"
++    "-y --tx0 <name,port,baud> \n"
++    "                      bind uart0 tx port to file/stdio using baud"
++    "-z --rx1 <name,port,baud> \n"
++    "                      bind uart1 rx port to file/stdio using baud"
+     "-d --device <name>    simulate device <name> \n"
+     "-g --gdbserver        listen for GDB connection on TCP port defined by -p\n"
+     "-G --gdb-debug        listen for GDB connection and write debug info\n"
+@@ -159,6 +202,10 @@
+     unsigned long writeToExit = 0;
+     string readFromPipeFileName = "";
+     string writeToPipeFileName = "";
++
++    vector<string> uart0rxArgs;
++    vector<string> uart0txArgs;
++    vector<string> uart1rxArgs;
+     
+     vector<string> terminationArgs;
+     
+@@ -179,6 +226,7 @@
+             {"maxruntime", 1, 0, 'm'},
+             {"nogdbwait", 0, 0, 'n'},
+             {"trace", 1, 0, 't'},
++	    {"rx0", 1, 0, 'x'},
+             {"version", 0, 0, 'V'},
+             {"cpufrequency", 1, 0, 'F'},
+             {"readfrompipe", 1, 0, 'R'},
+@@ -194,11 +242,23 @@
+             {0, 0, 0, 0}
+         };
+         
+-        c = getopt_long(argc, argv, "a:e:f:d:gGm:p:t:uxyzhvnisF:R:W:VT:B:c:C:o:l:", long_options, &option_index);
++        c = getopt_long(argc, argv, "a:e:f:d:gGm:p:t:x:y:z:uhvnisF:R:W:VT:B:c:C:o:l:", long_options, &option_index);
+         if(c == -1)
+             break;
+         
+         switch(c) {
++	    case 'x':
++		split(string(optarg), ',', uart0rxArgs);
++		break;
++
++	    case 'y':
++		split(string(optarg), ',', uart0txArgs);
++		break;
++
++	    case 'z':
++		split(string(optarg), ',', uart1rxArgs);
++		break;
++
+             case 'B':
+             case 'T':
+                 terminationArgs.push_back(optarg);
+@@ -358,7 +418,11 @@
+     AvrDevice *dev1 = AvrFactory::instance().makeDevice(new_devicename);
+     dev1->SetDeviceNameAndSignature(new_devicename, sig);
+     free(new_devicename);
+-    
++
++    addUARTBinding(dev1, uart0rxArgs, true);
++    addUARTBinding(dev1, uart0txArgs, false);
++    addUARTBinding(dev1, uart1rxArgs, true);
++
+     /* We had to wait with dumping the available tracing values
+       until the device has been created! */
+     if(tracer_dump_avail) {

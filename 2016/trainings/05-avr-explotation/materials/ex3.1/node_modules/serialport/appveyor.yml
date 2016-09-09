@@ -1,0 +1,60 @@
+# AppVeyor file
+# http://www.appveyor.com/docs/appveyor-yml
+
+os: unstable
+
+# Fix line endings on Windows
+init:
+  - git config --global core.autocrlf true
+
+# environment variables
+environment:
+  NODE_PRE_GYP_GITHUB_TOKEN:
+    secure: azLeMAlIn7bfsIjPriD3O8kg3/uLPNOnAE6FgwPvIT+MWSlMsG3giURb7SxQ01tB
+
+  matrix:
+  - nodejs_version: "0.10"
+  - nodejs_version: "0.12"
+  - nodejs_version: "4.2"
+
+platform:
+  - x86
+  - x64
+
+install:
+  - cmd: ECHO %nodejs_version%
+  - cmd: ECHO %platform%
+  - cmd: ECHO %APPVEYOR_REPO_COMMIT_MESSAGE%
+
+  - cmd: SET PATH=%cd%\node_modules\.bin\;%PATH%
+  - ps:  Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version) $env:platform
+  - cmd: IF %nodejs_version% LSS 1 npm -g install npm
+  - cmd: IF %nodejs_version% LSS 1 set PATH=%APPDATA%\npm;%PATH%
+
+  - cmd: SET COMMIT_MSG="%APPVEYOR_REPO_COMMIT_MESSAGE%"
+  - cmd: SET PUBLISH_BINARY=false
+  # Check to verify the branch is the same than latest tag, if so
+  # then we publish the binaries if everything else is successful.
+  - cmd: git describe --tags --always HEAD > _git_tag.tmp
+  - cmd: SET /p GIT_TAG=<_git_tag.tmp
+  - cmd: ECHO %GIT_TAG%
+  - cmd: ECHO %APPVEYOR_REPO_BRANCH%
+  - cmd: DEL _git_tag.tmp
+  - cmd: IF x%APPVEYOR_REPO_BRANCH%==x%GIT_TAG% SET PUBLISH_BINARY=true
+  # Or look for commit message containing `[publish binary]`
+  - cmd: IF not x%COMMIT_MSG:[publish binary]=%==x%COMMIT_MSG% SET PUBLISH_BINARY=true
+  - cmd: ECHO %PUBLISH_BINARY%
+
+build_script:
+  - cmd: npm install --build-from-source --msvs_version=2013 --verbose
+
+test_script:
+  - cmd: npm test
+
+on_success:
+  - cmd: IF %PUBLISH_BINARY%==true (node-pre-gyp package 2>&1)
+  - cmd: IF %PUBLISH_BINARY%==true (node-pre-gyp-github publish 2>&1)
+  - cmd: IF %PUBLISH_BINARY% == true (node-pre-gyp clean)
+  - cmd: IF %PUBLISH_BINARY% == true (npm install --fallback-to-build=false)
+
+deploy: OFF
