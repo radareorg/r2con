@@ -22,6 +22,6 @@ tk func.strncpy.arg.2=size_t,n
 tk func.strncpy.args=3
 tk free=func
 tk func.free.args=1
-tk func.free.arg0=void *,ptr
+tk func.free.arg.0=void *,ptr
 tk func.free.ret=void
 tk func.free.cc=amd64
