@@ -1,0 +1,9 @@
+Sat 10 - 10:00 - Glibc Heap Analysis in Linux Systems with Radare2 (n4x0r)
+
+Even though the functionality of the Heap is well known between Reverse
+Engineers and Exploit Developers, generally the internal mechanisms of this
+memory region are unknown due to the poor documentation and complexity of the
+different dynamic memory allocators and their differences across systems. For
+that reason, this talk is intended to familiarize the audience with the Linux
+Heap structure formed by the glibc malloc dynamic memory allocator algorithm
+along with its analysis using radare2.
