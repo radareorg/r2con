@@ -12,4 +12,4 @@ npm start
 
 ## Video of the talk
 
-<iframe width="800" height="600" src="https://youtu.be/wVTXrmOyqwQ" frameborder="0" allowfullscreen></iframe>
+[![Reversing an AVR-based ESC](http://img.youtube.com/vi/wVTXrmOyqwQ/0.jpg)](http://www.youtube.com/watch?v=wVTXrmOyqwQ)
