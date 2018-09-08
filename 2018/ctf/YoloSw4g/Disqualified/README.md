@@ -1,4 +1,4 @@
-# Disqualified write-up
+# Solution for the challenge Disqualified [400pts]
 
 ## First observations
 
