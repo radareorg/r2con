@@ -1,0 +1,641 @@
+<html>
+<head>
+	<!--http://livejs.com/live.js"-->
+	<!--<script type="text/javascript" src="js/live.js"></script>-->
+	<title>Cyanpencil's GSOC</title>
+	<!--<link rel="stylesheet" href="css/reveal.css">-->
+	<link rel="stylesheet" href="https://rawgit.com/hakimel/reveal.js/master/css/reveal.css">
+	<!--<link rel="stylesheet" href="css/theme/white.css">-->
+	<link rel="stylesheet" href="https://rawgit.com/hakimel/reveal.js/master/css/theme/white.css">
+	<!--<link rel="stylesheet" href="css/theme/black.css">-->
+	<!--<link rel="stylesheet" href="css/theme/night.css">-->
+
+	<!-- Highlight.js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+	<!--<link rel="stylesheet" href="css/default.min.css">-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/atom-one-dark.min.css">
+	<!--<link rel="stylesheet" href="css/atom-one-dark.min.css">-->
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+		section {
+			font-family: 'Varela Round', sans-serif !important;
+		}
+
+		h1, h2, h3, h4, h5 {
+			font-family: 'Varela Round', sans-serif !important;
+			text-transform: inherit !important;
+		}
+
+		ul ul {
+			font-size: 0.75em !important;
+		}
+
+		minor {
+			color: grey;
+			font-size: 0.90em;
+		}
+
+		minor:before {
+			content: '(';
+		}
+
+		minor:after {
+			content: ')';
+		}
+
+		.left-align {
+			text-align: left;
+		}
+
+		.footnote {
+			width: 100%;
+			text-align: left;
+			color: grey;
+		}
+
+		.smally tr td {
+			font-size: 60%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="reveal"> <div class="slides">
+
+
+
+
+		<section>
+				<h3> Google Summer of Code 2018</h3>
+				<img style="margin: auto; padding: 10px; display: block; align:center; border:none; box-shadow:none"src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-icon-192.png">
+				<!--<img style="margin: auto; padding: 10px; display: block; align:center; border:none; box-shadow:none"src="img/img9.png">-->
+
+				 <b>Console Interface Improvements</b>
+
+				 <br><br>
+				<img src="https://avatars3.githubusercontent.com/u/3428362?s=460&v=4" style="display: inline-block; box-shadow: none; border: none; height: 1.5em; vertical-align: middle; background: rgba(0, 0, 0, 0)"> 
+				<!--<img src="img/img1" style="display: inline-block; box-shadow: none; border: none; height: 1.5em; vertical-align: middle; background: rgba(0, 0, 0, 0)"> -->
+				@cyanpencil's final report
+				<br>
+				<minor>Luca Di Bartolomeo</minor>
+
+		</section>
+
+		<section>
+			<h2> My original task: </h2>
+			<img src="https://imgur.com/U5xBloE.png"/>
+		</section>
+
+
+
+		<section >
+			<h2> What did I <em>really</em> work on </h2>
+				<ul>
+					<li> Graphs
+					<li> UTF-8
+					<li> <s> Arguing with Travis </s>
+					<li> General CLI fixes
+				</ul>
+		</section>
+
+
+
+		<section>
+			<section>
+				<h1> Graphs </h1>
+			</section>
+			<section>
+
+				<h2> ag* commands </h2>
+
+				<code>"ag"</code> commands needed a big refactoring
+
+				<br>
+
+				<small class="fragment">
+				<pre style="width:100%; font-size:70%; "><code class="json" style="max-height:100%;">[0x00000000]> ag?
+|Usage: ag[?f] Graphviz/graph code
+| ag [addr]             output graphviz code (bb at addr and children)
+| ag-                   Reset the current ASCII art graph (see agn, age, agg?)
+| aga [addr]            idem, but only addresses
+| agr[j] [addr]         output graphviz call graph of function
+| agg                   display current graph created with agn and age (see also ag-)
+| agc[*j] [addr]        output graphviz call graph of function
+| agC[j]                Same as agc -1. full program callgraph
+| agd [fcn name]        output graphviz code of diffed function
+| age[?] title1 title2  Add an edge to the current graph
+| agf [addr]            Show ASCII art graph of given function
+| agg[?] [kdi\*]         Print graph in ASCII-Art, graphviz, k=v, r2 or visual
+| agj [addr]            idem, but in JSON format
+| agJ [addr]            idem, but in JSON format with formatted disassembly (like pdJ)
+| agk [addr]            idem, but in SDB key-value format
+| agl [fcn name]        output graphviz code using meta-data
+| agn[?] title body     Add a node to the current graph
+| ags [addr]            output simple graphviz call graph of function (only bb offset)
+| agt [addr]            find paths from current offset to given address
+| agv                   Show function graph in web/png (see graph.web and cmd.graph) 
+				</code></pre> 
+				</small>
+
+			</section>
+			<section>
+
+			<div>
+				<u>New syntax</u>:
+				<br>
+				<code> ag[graph type][output format]</code>
+			</div>
+
+			</section>
+			<section>
+
+				<code>
+				<table class="smally">
+					<tr>
+						<td> </td>
+						<td> Graph types </td>
+						<td> </td>
+						<td> Output formats </td>
+					</tr><tr>
+					<tr>
+						<td> a </td>
+						<td> Data references </td>
+						<td> blank </td>
+						<td> Ascii art </td>
+					</tr><tr>
+					<tr>
+						<td> c </td>
+						<td> Function callgraph </td>
+						<td> * </td>
+						<td> r2 commands </td>
+					</tr><tr>
+					<tr>
+						<td> d </td>
+						<td> Diff graph </td>
+						<td> d </td>
+						<td> Graphviz dot </td>
+					</tr><tr>
+					<tr>
+						<td> f </td>
+						<td> Function graph </td>
+						<td> g </td>
+						<td> Graphviz gml </td>
+					</tr><tr>
+					<tr>
+						<td> i </td>
+						<td> Imports Graph </td>
+						<td> j/J </td>
+						<td> JSON </td>
+					</tr><tr>
+					<tr>
+						<td> r </td>
+						<td> References graph </td>
+						<td> k </td>
+						<td> SDB key-value </td>
+					</tr><tr>
+					<tr>
+						<td> x </td>
+						<td> X-references graph </td>
+						<td> t </td>
+						<td> Tiny ascii </td>
+					</tr><tr>
+					<tr>
+						<td> g </td>
+						<td> Custom graph </td>
+						<td> v </td>
+						<td> Interactive ascii </td>
+					</tr><tr>
+					<tr>
+						<td> </td>
+						<td> </td>
+						<td> w </td>
+						<td> Image (png, svg...)</td>
+					</tr><tr>
+				</table>
+				</code>
+
+				<br>
+
+				<div class="fragment" style="text-align:left; margin-left:10%; font-size:80%;">
+					<b>Examples</b>: <br>
+					<code> agfv </code> <minor>interactive function graph, same as <code>VV</code> </minor> <br>
+					<code> agcv </code> <minor>interactive callgraph</minor><br>
+					<code> agiw </code> <minor>import graph in image output, image extension governed by <code>graph.gv.format</code></minor>
+				</div>
+
+			</section>
+			<section >
+
+<h3> ag? help (after) </h3>
+<small class="fragmenta">
+<pre style="width:100%; font-size:60%;"><code class="json" style="max-height:100%;">[0x00000000]> ag?
+|Usage: ag<graphtype><format> [addr]
+| Graph commands:         
+| aga[format]             Data references graph
+| agA[format]             Global data references graph
+| agc[format]             Function callgraph
+| agC[format]             Global callgraph
+| agd[format] [fcn addr]  Diff graph
+| agf[format]             Basic blocks function graph
+| agi[format]             Imports graph
+| agr[format]             References graph
+| agR[format]             Global references graph
+| agx[format]             Cross references graph
+| agg[format]             Custom graph
+| ag-                     Clear the custom graph
+| agn[?] title body       Add a node to the custom graph
+| age[?] title1 title2    Add an edge to the custom graph
+|                         
+| Output formats:         
+| blank                   Ascii art
+| *                       r2 commands
+| d                       Graphviz dot
+| g                       Graph Modelling Language (gml)
+| j                       json ('J' for formatted disassembly)
+| k                       SDB key-value
+| t                       Tiny ascii art
+| v                       Interactive ascii art
+| w [path]                Write to path or display graph image (see graph.gv.format and graph.web)
+</code></pre>
+</small>
+
+			</section>
+		</section>
+
+
+
+
+		<section>
+			<section>
+				<h3> Jump Tables (before) </h3>
+				<!--<img src="https://user-images.githubusercontent.com/917142/41042922-233c581a-69a3-11e8-97ba-5d7c16c9c509.png" class="fragment" style="height:80%;"/>-->
+				<img src="https://imgur.com/j7EwVtE.jpg" class="fragment" style="height:80%;"/>
+				<!--<img src="img/img2.png" class="fragment" style="height:80%;"/>-->
+			</section>
+			<section >
+				<h3> Jump Tables (after) </h3>
+				<img src="https://camo.githubusercontent.com/88b58979715672645222d186224d72f350167ff8/68747470733a2f2f696d6775722e636f6d2f7438467351324b2e706e67" class="fragment" style="height:80%;"/>
+				<!--<img src="img/img3.png" class="fragment" style="height:80%;"/>-->
+			</section>
+		</section>
+
+
+
+		<section >
+			<section>
+				<h1> UTF-8 </h1>
+				<small> Unicode Transformation Format, 8 bit</small>
+				<br>
+				<br>
+				<div class="fragment" style="text-align:left; width:max-content; margin:auto; font-size:80%;">
+					<code> 
+						(1) 0xxxxxxx<br>
+						(2) 110xxxxx 10xxxxxx<br>
+						(3) 1110xxxx 10xxxxxx 10xxxxxx<br>
+						(4) 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx<br>
+					</code>
+				</div>
+				<br>
+				<div class="fragment" style="text-align:left; width:max-content; margin:auto; font-size:80%;">
+					<ul>
+						<li> Up to 21 bits for char 
+							<ul><li>enough for all 1,112,064 valid code points in Unicode</ul>
+						<li> Standard ASCII <minor>first 127 chars</minor> remains the same
+				</div>
+			</section>
+			<section>
+				<h2> Example </h2>
+				Encoding the <code>cent</code> sign '&#xa2;' 
+
+				<br>
+				<br>
+				<ul style="font-size:80%;"> 
+					<li> codepoint U+00A2
+					<li> 0x00A2 in binary is 1010 0010 <minor>8 bits</minor>
+					<li> <span style="color:green">10</span><span style="color:red">10 0010</span>
+					<li> We need 2 bytes to encode it in UTF-8
+					<li> Result: <code>110<span style="color:green">00010</span> 10<span style="color:red">100010</span> </code>
+				</ul>
+			</section>
+			<section>
+				<h2> Example </h2>
+				Encoding the <code>euro</code> sign '&#x20ac;' 
+
+				<br>
+				<br>
+				<ul style="font-size:80%;"> 
+					<li> codepoint U+20AC
+					<li> 0x20AC in binary is 10 0000 1010 1100 <minor>14 bits</minor>
+					<li> <span style="color:blue">10</span><span style="color:green">0000 10</span><span style="color:red">10 1100</span>
+					<li> We need 3 bytes to encode it in UTF-8
+					<li> Result: <code>1110<span style="color:blue">0010</span> 10<span style="color:green">000010</span> 10<span style="color:red">101100</span></code>
+				</ul>
+			</section>
+			<section>
+				<h3> Sounds easy, right? </h3>
+				<h3 class="fragment"> <u> No, there are a shitload of problems </u> </h3>
+			</section>
+			<section>
+				<h2> Problem #1: </h2>
+				<em style="font-size:75%"> There is no more guarantee that a character is single byte. </em>
+				<br>
+
+				<br>
+				<div class="fragment" style="align:left; margin:auto; width:fit-content;">
+					<code> strlen ("anal") = 4;<br>strlen ("fu&euro;k") = 6; </code>
+				</div>
+				<br>
+				<br>
+				<div class="fragment">
+					<em style="font-size:75%"> AKA all layout calculations in r2 canvas were messed up. </em>
+				</div>
+			</section>
+			<section>
+				<h2> Solution #1: </h2>
+				<ul>
+					<li> When moving the cursor in canvas, subtract the length of "invisible" UTF-8 control chars 
+					<li> Also, almost rewrote r2 canvas from scratch to support for variable-lenght lines
+					<ul>
+						<li> <minor>Canvas was just a buffer with length <code>lines*columns</code></minor>
+					</ul>
+				</ul>
+
+			</section>
+			<section>
+				<h2> Problem #2: </h2>
+				<em style="font-size:75%"> Some unicode characters do not render as just one terminal cell </em>
+				<img style="display: block; margin: 3% auto; vertical-align: middle; width: 40%;" src="https://user-images.githubusercontent.com/3428362/42177023-5b29c4f0-7e2b-11e8-970a-741d7a6200c9.png"/>
+				<div class="fragment">
+					<em style="font-size:75%"> AKA all layout calculations in r2 canvas were messed up, <u>again</u> </em>
+					<img style="display: block; box-shadow: none; margin: 3% auto; vertical-align: middle; background: rgba(0, 0, 0, 0); width:40%;" src="https://user-images.githubusercontent.com/3428362/42176946-02915682-7e2b-11e8-99da-7224b89dff79.png"/>
+				</div>
+
+			</section>
+			<section>
+				<h2> Solution #2: </h2>
+				<ul>
+					<li> Look up which character sets <minor>Chinese, Japanese, Korean</minor> use two terminal cells, and take account for them when calculating string lengths for the layout
+				</ul>
+
+			</section>
+			<section>
+				<h2> Problem #3: </h2>
+				<em style="font-size:75%"> Some unicode characters can be combined together to form complex glyphs</em>
+
+			</section>
+			<section>
+				<h2> Solution #3: </h2>
+				<ul>
+					<li> ???
+					<li> ???
+					<li> ???
+				</ul>
+
+			</section>
+			<section>
+				<h2> Problem #4: </h2>
+				<em style="font-size:75%"> Some languages supported by unicode are written right-to-left </em>
+				<br>
+				<em style="font-size:75%"> E.g. Arabic, Hebrew, Persian</em>
+				<br>
+				<br>
+				
+
+			</section>
+			<section>
+				<h2 class="fragment strike" data-fragment-index="1"> Solution #4: </h2>
+				<ul class="fragment" data-fragment-index="1">
+					<li> Many terminal emulators still don't support bidirectional text :(
+					<li> Support can be added for most of them through plugins, but that is up to the user
+				</ul>
+
+			</section>
+		</section>
+
+
+
+		<section>
+			<section >
+				<h2> Vim-like Autocompletion widget </h2>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2> What is this about? </h2>
+					- Autocompletion is the same as before
+					- Just better looking 
+						- <minor>100% copied from vim :D</minor>
+					- And a bit more user-friendly 
+						- <minor>Autocompletion as-you-type</minor>
+					- Only works in visual offset prompt 
+						- <minor>Press 'o' in visual mode to bring it up</minor>
+
+					<div class="fragment" style="text-align:left; margin-left:10%;">
+						<br>
+						<u>Drawback</u>:<br>
+						Only works in visual mode <minor class="fragment">for now</minor>
+					</div>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					### demo
+					<!--![](https://user-images.githubusercontent.com/3428362/43653088-541d5142-9747-11e8-9a23-1ea5e44742f0.gif) -->
+				</script>
+			</section>
+		</section>
+
+
+		<section>
+			<section data-markdown>
+				<script type="text/template">
+					# Some minor stuff 
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					- Dotted lines in graph with `e graph.dotted`
+					<!-- https://user-images.githubusercontent.com/3428362/43345976-ced5658a-91ef-11e8-9b9d-c479f1b0e2dd.png-->
+					![](https://user-images.githubusercontent.com/3428362/43345976-ced5658a-91ef-11e8-9b9d-c479f1b0e2dd.png) 
+					<!--![](img/img5.png) -->
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					- Fold *xrefs* and *cases* flags screen clutter
+					<!-- https://user-images.githubusercontent.com/3428362/41873071-2bc36660-78c4-11e8-8b6e-bcbd7aa59d48.png-->
+					![](https://user-images.githubusercontent.com/3428362/41873071-2bc36660-78c4-11e8-8b6e-bcbd7aa59d48.png) 
+					<!--![](img/img6.png) -->
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					- Colorize function arguments and variables
+					<!-- https://user-images.githubusercontent.com/3428362/42903654-d7af97da-8ad2-11e8-9832-6663605b06ed.png-->
+					![](https://user-images.githubusercontent.com/3428362/42903654-d7af97da-8ad2-11e8-9832-6663605b06ed.png) 
+					<!--![](img/img7.png) -->
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					- Show unicode strings in disasm
+					<!-- https://user-images.githubusercontent.com/3428362/42127633-9997aabc-7c9c-11e8-9b12-77a2c271976a.png-->
+					![](https://user-images.githubusercontent.com/3428362/42127633-9997aabc-7c9c-11e8-9b12-77a2c271976a.png) 
+					<!--![](img/img8.png) -->
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					- Broke master branch <em>a few times</em>
+					![](https://imgur.com/veLPhFU.png)
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					- Recursively search zignatures in folders with `zfs /path/**.zig`
+					<br>
+					- And fixed many many bugs... <!-- .element: class="fragment" data-fragment-index="1" -->
+						- <minor>most of which were introduced by me in the first place, but pls dont tell @pancake</minor> <!-- .element: class="fragment" data-fragment-index="1"-->
+				</script>
+			</section>
+		</section>
+		<section>
+			<h2> Special thanks to:</h2>
+			My mentors:
+			<br>
+			<ul>
+				<li> @XVilka
+				<li> @Pancake
+				<li> @Maijin
+				<li> @Deroad
+			</ul>
+
+			<br>
+			<br>
+			And the <b>awesome</b> r2 community :)
+
+		</section>
+		<section>
+			<h1> Thanks for your attention! </h1>
+		</section>
+
+
+
+	</div> </div>
+
+	<script src="https://rawgit.com/hakimel/reveal.js/master/js/reveal.js"></script>
+	<script src="https://rawgit.com/hakimel/reveal.js/master/plugin/highlight/highlight.js"></script>
+	<script src="https://rawgit.com/hakimel/reveal.js/master/plugin/markdown/marked.js"></script>
+	<script src="https://rawgit.com/hakimel/reveal.js/master/plugin/markdown/markdown.js"></script>
+
+	<!--<script src="lib/js/head.min.js"></script>-->
+	<!--<script src="js/reveal.js"></script>-->
+	<script>
+		Reveal.initialize({
+
+			<!--dependencies: [-->
+				<!--{ src: 'plugin/markdown/marked.js' },-->
+				<!--{ src: 'plugin/markdown/markdown.js' },-->
+				<!--{ src: 'plugin/notes/notes.js', async: true },-->
+				<!--{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }-->
+			<!--],-->
+
+
+			// Display controls in the bottom right corner
+			controls: false,
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Display the page number of the current slide
+			slideNumber: true,
+
+			// Push each slide change to the browser history
+			history: true,
+
+			// Enable keyboard shortcuts for navigation
+			keyboard: true,
+
+			// Enable the slide overview mode
+			overview: true,
+
+			// Vertical centering of slides
+			center: true,
+
+			// Enables touch navigation on devices with touch input
+			touch: true,
+
+			// Loop the presentation
+			loop: false,
+
+			// Change the presentation direction to be RTL
+			rtl: false,
+
+			// Randomizes the order of slides each time the presentation loads
+			shuffle: false,
+
+			// Turns fragments on and off globally
+			fragments: true,
+
+			// Flags if the presentation is running in an embedded mode,
+			// i.e. contained within a limited portion of the screen
+			embedded: false,
+
+			// Flags if we should show a help overlay when the questionmark
+			// key is pressed
+			help: true,
+
+			// Flags if speaker notes should be visible to all viewers
+			showNotes: false,
+
+			// Number of milliseconds between automatically proceeding to the
+			// next slide, disabled when set to 0, this value can be overwritten
+			// by using a data-autoslide attribute on your slides
+			autoSlide: 0,
+
+			// Stop auto-sliding after user input
+			autoSlideStoppable: true,
+
+			// Use this method for navigation when auto-sliding
+			autoSlideMethod: Reveal.navigateNext,
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: false,
+
+			// Hides the address bar on mobile devices
+			hideAddressBar: true,
+
+			// Opens links in an iframe preview overlay
+			previewLinks: false,
+
+			// Transition style
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Transition style for full page slide backgrounds
+			backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			// Number of slides away from the current that are visible
+			viewDistance: 3,
+
+			// Parallax background image
+			parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+			// Parallax background size
+			parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+			// Number of pixels to move the parallax background per slide
+			// - Calculated automatically unless specified
+			// - Set to 0 to disable movement along an axis
+			parallaxBackgroundHorizontal: null,
+			parallaxBackgroundVertical: null
+
+
+
+		});
+	</script>
+</body>
+</html>
