@@ -1,0 +1,14 @@
+digraph code {
+	graph [bgcolor=azure fontsize=8 fontname="Courier" splines="ortho"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="normal"];
+	"0x00000f12" -> "0x00000f6b" [color="blue"];
+	"0x00000f12" [URL="sub.signal_f12/0x00000f12", fillcolor="palegreen",color="yellow", fontname="Courier",label=";-- section_end..text:\l;-- section.c0de:\l(fcn) sub.signal_f12 101\l  sub.signal_f12 ();\l; var signed int local_4h @ rbp-0x4\l; DATA XREF from 0x00000cde (sub.getpagesize_cc2)\l; DATA XREF from 0x00000d82 (main)\l; DATA XREF from 0x00000ddd (main)\l; CALL XREF from 0x00000de9 (main)\l; DATA XREF from 0x00000e0f (entry2.init)\l0x00000f12      push rbp ; [15] -r-x section size 101 named c0de\l0x00000f13      mov rbp, rsp\l0x00000f16      sub rsp, 0x10\l0x00000f1a      mov eax, 0\l0x00000f1f      call fcn.init_key\l0x00000f24      movzx eax, byte [0x00202011] ; [0x202011:1]=72\l0x00000f2b      movsx eax, al\l0x00000f2e      lea rdx, [0x0020204d]\l0x00000f35      mov esi, eax\l0x00000f37      lea rdi, [0x00000c7a]\l0x00000f3e      call fcn.decrypt_func\l0x00000f43      lea rsi, [0x00000c7a] ; void *func\l0x00000f4a      mov edi, 2 ; int sig\l0x00000f4f      call sym.imp.signal ; void signal(int sig, void *func)\l0x00000f54      mov dword [local_4h], 1\l0x00000f5b      jmp 0xf6b\l"]
+	"0x00000f5d" -> "0x00000f6b" [color="blue"];
+	"0x00000f5d" [URL="sub.signal_f12/0x00000f5d", fillcolor="white",color="yellow", fontname="Courier",label="; CODE XREF from 0x00000f72 (sub.signal_f12)\l0x00000f5d      mov edi, 2 ; int sig\l0x00000f62      call sym.imp.raise ; int raise(int sig)\l0x00000f67      add dword [local_4h], 1\l"]
+	"0x00000f6b" -> "0x00000f5d" [color="green"];
+	"0x00000f6b" -> "0x00000f74" [color="red"];
+	"0x00000f6b" [URL="sub.signal_f12/0x00000f6b", fillcolor="white",color="yellow", fontname="Courier",label="; CODE XREF from 0x00000f5b (sub.signal_f12)\l0x00000f6b      cmp dword [local_4h], 0x3ff ; [0x3ff:4]=0\l0x00000f72      jle 0xf5d\l"]
+	"0x00000f74" [URL="sub.signal_f12/0x00000f74", fillcolor="white",color="yellow", fontname="Courier",label="0x00000f74      nop\l0x00000f75      leave\l0x00000f76      ret\l"]
+}
+
