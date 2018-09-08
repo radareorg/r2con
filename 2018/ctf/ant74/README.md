@@ -75,7 +75,7 @@ There are symbols, so let's print all symbols that have `main.` in their name:
 4017 0x000ba1e0 0x081021e0 GLOBAL   FUNC   69 type..eq.main.player
 ```
 
-It looks like `main.win` is what we are expecting to get in the end.
+It looks like `sym.main.win` is what we are expecting to get in the end.
 
 ```asm
 [0x08094250]> pd 50 @ sym.main.win
@@ -657,7 +657,7 @@ It's important to note that `sym.main.move` has the following check:
 The `obj.main.exhausted` is initializated with `0x58` in `sym.main.main` function.
 So we have limited number of moves, specifically it should be less than 88.
 
-Since our input is probably used as input for `sym.main.move` function, we can assume that there is only one right solution.
+Since our input is probably used as input for `sym.main.win` function, we can assume that there is only one right solution.
 
 Our goal is to move player from 0,0 to f. We can use `d` and `u` cells in order to be transfered between mazes.
 Here is our path:
