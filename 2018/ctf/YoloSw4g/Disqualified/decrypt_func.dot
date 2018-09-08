@@ -1,0 +1,14 @@
+digraph code {
+	graph [bgcolor=azure fontsize=8 fontname="Courier" splines="ortho"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="normal"];
+	"0x00000a0e" -> "0x00000a6a" [color="blue"];
+	"0x00000a0e" [URL="fcn.decrypt_func/0x00000a0e", fillcolor="palegreen",color="yellow", fontname="Courier",label=";-- rip:\l(fcn) fcn.decrypt_func 111\l  fcn.decrypt_func (int arg1, int arg2, int arg3);\l; var int key_addr @ rbp-0x28\l; var int func_size @ rbp-0x1c\l; var int func_addr @ rbp-0x18\l; var int i @ rbp-0x9\l; var unsigned int curr_ptr @ rbp-0x8\l; CALL XREF from 0x00000de4 (main)\l0x00000a0e      push rbp\l0x00000a0f      mov rbp, rsp\l0x00000a12      mov qword [func_addr], rdi ; arg1\l0x00000a16      mov dword [func_size], esi ; arg2\l0x00000a19      mov qword [key_addr], rdx ; arg3\l0x00000a1d      mov byte [i], 0\l0x00000a21      mov rax, qword [func_addr]\l0x00000a25      mov qword [curr_ptr], rax ; curr_ptr = func_addr\l0x00000a29      jmp 0xa6a\l"]
+	"0x00000a2b" -> "0x00000a6a" [color="blue"];
+	"0x00000a2b" [URL="fcn.decrypt_func/0x00000a2b", fillcolor="white",color="yellow", fontname="Courier",label="; CODE XREF from 0x00000a78 (fcn.decrypt_func)\l0x00000a2b      mov rax, qword [curr_ptr]\l0x00000a2f      movzx ecx, byte [rax]\l0x00000a32      movzx edx, byte [i]\l0x00000a36      mov rax, qword [key_addr]\l0x00000a3a      add rax, rdx ; '('\l0x00000a3d      movzx eax, byte [rax]\l0x00000a40      xor ecx, eax\l0x00000a42      mov edx, ecx\l0x00000a44      mov rax, qword [curr_ptr]\l0x00000a48      mov byte [rax], dl ; *curr_ptr ^= key[i]\l0x00000a4a      movzx eax, byte [i]\l0x00000a4e      lea edx, [rax + 1]\l0x00000a51      mov eax, edx\l0x00000a53      sar eax, 0x1f\l0x00000a56      shr eax, 0x1e\l0x00000a59      add edx, eax\l0x00000a5b      and edx, 3\l0x00000a5e      sub edx, eax\l0x00000a60      mov eax, edx\l0x00000a62      mov byte [i], al ; i = (i+1) % 4\l0x00000a65      add qword [curr_ptr], 1 ; curr_ptr++\l"]
+	"0x00000a6a" -> "0x00000a2b" [color="green"];
+	"0x00000a6a" -> "0x00000a7a" [color="red"];
+	"0x00000a6a" [URL="fcn.decrypt_func/0x00000a6a", fillcolor="white",color="yellow", fontname="Courier",label="; CODE XREF from 0x00000a29 (fcn.decrypt_func)\l0x00000a6a      mov edx, dword [func_size]\l0x00000a6d      mov rax, qword [func_addr]\l0x00000a71      add rax, rdx ; '('\l0x00000a74      cmp qword [curr_ptr], rax ; [0x23:8]=0x21300000000000 ; '#'\l0x00000a78      jb 0xa2b ; while curr_ptr < func_addr + func_size\l"]
+	"0x00000a7a" [URL="fcn.decrypt_func/0x00000a7a", fillcolor="white",color="yellow", fontname="Courier",label="0x00000a7a      nop\l0x00000a7b      pop rbp\l0x00000a7c      ret\l"]
+}
+
