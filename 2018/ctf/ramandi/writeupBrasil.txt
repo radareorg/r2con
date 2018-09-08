@@ -1,0 +1,833 @@
+This WriteUp will show my solution to challenge "Brazil - Disqualified" by Megabeets.  The writeup si far from perfect and I expect to complete and correct it later.
+
+The description of the challenge was:
+Welcome to Planet Music!
+Show me what you got! I Want to see what you got!
+Put the flag inside r2con{flag} and check if you got the right flag.
+
+We also get a binary file.
+
+Just as a reminder, to install our reversing platform (in kali as root):
+
+cd
+git clone https://github.com/radare/radare2.git
+cd radare2
+sys/install.sh
+apt-get install pkg-config
+r2pm init
+r2pm install r2dec
+
+We open the binary with r2 and see it is an elf64 for x86-64.
+
+root@kali:~/shared# r2 ./disqualified_6144fa7e73cf0337215b60737fb2384b.bin 
+ -- SHALL WE PLAY A GAME?
+[0x00000890]> i
+blksz    0x0
+block    0x100
+fd       3
+file     disqualified_6144fa7e73cf0337215b60737fb2384b.bin
+format   elf64
+iorw     false
+mode     r-x
+size     0x2830
+humansz  10K
+type     DYN (Shared object file)
+arch     x86
+baddr    0x0
+binsz    8494
+bintype  elf
+bits     64
+canary   true
+class    ELF64
+crypto   false
+endian   little
+havecode true
+intrp    /lib64/ld-linux-x86-64.so.2
+lang     c
+linenum  false
+lsyms    false
+machine  AMD x86-64 architecture
+maxopsz  16
+minopsz  1
+nx       true
+os       linux
+pcalign  0
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+static   false
+stripped true
+subsys   linux
+va       true
+
+Executing the binary (as a shell command, not really in rw) we can see that it asks for input, surely the flag, and says we are DISQUALIFIED after that.
+
+[0x00000890]> !./disqualified_6144fa7e73cf0337215b60737fb2384b.bin 
+ _____  ___   _____ ____  _   _ ___   ___  __  ___  
+|  __ \|__ \ / ____/ __ \| \ | |__ \ / _ \/_ |/ _ \ 
+| |__) |  ) | |   | |  | |  \| |  ) | | | || | (_) |
+|  _  /  / /| |   | |  | | . ` | / /| | | || |> _ < 
+| | \ \ / /_| |___| |__| | |\  |/ /_| |_| || | (_) |
+|_|  \_\____|\_____\____/|_| \_|____|\___/ |_|\___/ 
+
+	 	by Megabeets
+
+Show me what you got: xuxa
+DISQUALIFIED!
+
+TODO: include the trial and error path following DISQUALIFIED string.
+
+Since the binary is small, we launch a complete analysis, go to main function and review code.
+
+[0x00000890]> aaa
+[x] Analyze all flags starting with sym. and entry0 (aa)
+[x] Analyze function calls (aac)
+[x] Analyze len bytes of instructions for references (aar)
+[x] Constructing a function name for fcn.* and sym.func.* functions (aan)
+[x] Type matching analysis for all functions (afta)
+[x] Use -AA or aaaa to perform additional experimental analysis.
+[0x00000890]> s main
+[0x00000d70]> pdf
+            ;-- rip:
+/ (fcn) main 133
+|   main (int argc, char **argv, char **envp);
+|           ; var int local_8h @ rbp-0x8
+|           ; DATA XREF from entry0 (0x8ad)
+|           0x00000d70      55             push rbp
+|           0x00000d71      4889e5         mov rbp, rsp
+|           0x00000d74      4883ec10       sub rsp, 0x10
+|           0x00000d78      b800000000     mov eax, 0
+|           0x00000d7d      e818fcffff     call sub.._______________________________________________________________________________________________________________________________________________________by_Megabeets_99a
+|           0x00000d82      488d05890100.  lea rax, [fcn.00000f12]     ; 0xf12
+|           0x00000d89      488945f8       mov qword [local_8h], rax
+|           0x00000d8d      488d3d5f0300.  lea rdi, str.Show_me_what_you_got: ; 0x10f3 ; "Show me what you got: " ; const char *format
+|           0x00000d94      b800000000     mov eax, 0
+|           0x00000d99      e872faffff     call sym.imp.printf         ; int printf(const char *format)
+|           0x00000d9e      488b057b1220.  mov rax, qword [obj.stdin]  ; [0x202020:8]=0
+|           0x00000da5      4889c2         mov rdx, rax                ; FILE *stream
+|           0x00000da8      be1d000000     mov esi, 0x1d               ; int size
+|           0x00000dad      488d3d7c1220.  lea rdi, [0x00202030]       ; char *s
+|           0x00000db4      e877faffff     call sym.imp.fgets          ; char *fgets(char *s, int size, FILE *stream)
+|           0x00000db9      c6058c122000.  mov byte [0x0020204c], 0    ; [0x20204c:1]=0
+|           0x00000dc0      b800000000     mov eax, 0
+|           0x00000dc5      e80cfcffff     call fcn.000009d6
+|           0x00000dca      0fb6053f1220.  movzx eax, byte str.eHHHHH  ; [0x202010:1]=101 ; "eHHHHH\x1f"
+|           0x00000dd1      0fbec0         movsx eax, al
+|           0x00000dd4      488d15721220.  lea rdx, [0x0020204d]
+|           0x00000ddb      89c6           mov esi, eax
+|           0x00000ddd      488d3d2e0100.  lea rdi, [fcn.00000f12]     ; 0xf12
+|           0x00000de4      e825fcffff     call fcn.00000a0e
+|           0x00000de9      e824010000     call fcn.00000f12
+|           0x00000dee      b800000000     mov eax, 0
+|           0x00000df3      c9             leave
+\           0x00000df4      c3             ret
+
+After the initial message, it gets our input and put it in 0x00202030.  Then it calls fcn.000009d6, let's see what it does.
+TODO: include renaming functions and variables, adding comments...
+
+[0x00000d70]> pdf @ fcn.000009d6 
+/ (fcn) fcn.000009d6 56
+|   fcn.000009d6 ();
+|           ; CALL XREF from main (0xdc5)
+|           0x000009d6      55             push rbp
+|           0x000009d7      4889e5         mov rbp, rsp
+|           0x000009da      8b054c162000   mov eax, dword [0x0020202c] ; [0x20202c:4]=0
+|           0x000009e0      4863d0         movsxd rdx, eax
+|           0x000009e3      488d05461620.  lea rax, [0x00202030]       ; inputmsg
+|           0x000009ea      4801d0         add rax, rdx                ; '('
+|           0x000009ed      8b00           mov eax, dword [rax]
+|           0x000009ef      890558162000   mov dword [0x0020204d], eax ; [0x20204d:4]=0
+|           0x000009f5      c60555162000.  mov byte [0x00202051], 0    ; [0x202051:1]=0
+|           0x000009fc      8b052a162000   mov eax, dword [0x0020202c] ; [0x20202c:4]=0
+|           0x00000a02      83c004         add eax, 4
+|           0x00000a05      890521162000   mov dword [0x0020202c], eax ; [0x20202c:4]=0
+|           0x00000a0b      90             nop
+|           0x00000a0c      5d             pop rbp
+\           0x00000a0d      c3             ret
+[0x00000d70]> 
+
+It gets four bytes from our input and put them in 0x0020204d, followed by a null byte.  The first time it's called, it copies the first four bytes, since it uses the offset stored in 0x0020202c, which is zero at that moment, but the offset is incremented by 4, so future calls would give next bytes, 4 at a time.
+
+We go back to main, but this time we decompile the code, so it's easier to see parameter passed to functions:
+
+[0x00000d70]> pdd
+#include <stdio.h>
+uint64_t main () {
+    eax = 0;
+    by_Megabeets ();
+    rax = fcn_00000f12;
+    *(local_8h) = rax;
+    eax = 0;
+    printf ("Show me what you got: ", *(local_8h));
+    /* stdin */
+    rax = *(stdin);
+    rdx = rax;
+    esi = 0x1d;
+    rdi = 0x00202030;
+    fgets (rdi, esi, rdx);
+    *(0x0020204c) = 0;
+    eax = 0;
+    fcn_000009d6 ();
+    eax = str.eHHHHH;
+    eax = al;
+    rdx = 0x0020204d;
+    esi = eax;
+    rdi = fcn_00000f12;
+    fcn_00000a0e (rdi, esi, rdx);
+    fcn_00000f12 ();
+    eax = 0;
+    return rax;
+}
+
+We can see that 2 functions are called in a row, fcn_00000a0e and fcn_00000f12.  The first one receives the address of the second one, value 0x65 and the address 0x0020204d where 4 bytes of the flag where stored.  Let's see both functions:
+
+[0x00000d70]> pdf @ fcn.00000a0e
+/ (fcn) fcn.00000a0e 111
+|   fcn.00000a0e (int arg1, int arg2, int arg3);
+|           ; var int local_28h @ rbp-0x28
+|           ; var int local_1ch @ rbp-0x1c
+|           ; var int local_18h @ rbp-0x18
+|           ; var int local_9h @ rbp-0x9
+|           ; var unsigned int local_8h @ rbp-0x8
+|           ; arg int arg1 @ rdi
+|           ; arg int arg2 @ rsi
+|           ; arg int arg3 @ rdx
+|           ; CALL XREF from main (0xde4)
+|           0x00000a0e      55             push rbp
+|           0x00000a0f      4889e5         mov rbp, rsp
+|           0x00000a12      48897de8       mov qword [local_18h], rdi  ; arg1
+|           0x00000a16      8975e4         mov dword [local_1ch], esi  ; arg2
+|           0x00000a19      488955d8       mov qword [local_28h], rdx  ; arg3
+|           0x00000a1d      c645f700       mov byte [local_9h], 0
+|           0x00000a21      488b45e8       mov rax, qword [local_18h]
+|           0x00000a25      488945f8       mov qword [local_8h], rax
+|       ,=< 0x00000a29      eb3f           jmp 0xa6a
+|       |   ; CODE XREF from fcn.00000a0e (0xa78)
+|      .--> 0x00000a2b      488b45f8       mov rax, qword [local_8h]
+|      :|   0x00000a2f      0fb608         movzx ecx, byte [rax]
+|      :|   0x00000a32      0fb655f7       movzx edx, byte [local_9h]
+|      :|   0x00000a36      488b45d8       mov rax, qword [local_28h]
+|      :|   0x00000a3a      4801d0         add rax, rdx                ; '('
+|      :|   0x00000a3d      0fb600         movzx eax, byte [rax]
+|      :|   0x00000a40      31c1           xor ecx, eax
+|      :|   0x00000a42      89ca           mov edx, ecx
+|      :|   0x00000a44      488b45f8       mov rax, qword [local_8h]
+|      :|   0x00000a48      8810           mov byte [rax], dl
+|      :|   0x00000a4a      0fb645f7       movzx eax, byte [local_9h]
+|      :|   0x00000a4e      8d5001         lea edx, [rax + 1]
+|      :|   0x00000a51      89d0           mov eax, edx
+|      :|   0x00000a53      c1f81f         sar eax, 0x1f
+|      :|   0x00000a56      c1e81e         shr eax, 0x1e
+|      :|   0x00000a59      01c2           add edx, eax
+|      :|   0x00000a5b      83e203         and edx, 3
+|      :|   0x00000a5e      29c2           sub edx, eax
+|      :|   0x00000a60      89d0           mov eax, edx
+|      :|   0x00000a62      8845f7         mov byte [local_9h], al
+|      :|   0x00000a65      488345f801     add qword [local_8h], 1
+|      :|   ; CODE XREF from fcn.00000a0e (0xa29)
+|      :`-> 0x00000a6a      8b55e4         mov edx, dword [local_1ch]
+|      :    0x00000a6d      488b45e8       mov rax, qword [local_18h]
+|      :    0x00000a71      4801d0         add rax, rdx                ; '('
+|      :    0x00000a74      483945f8       cmp qword [local_8h], rax   ; [0x23:8]=0x21300000000000 ; '#'
+|      `==< 0x00000a78      72b1           jb 0xa2b
+|           0x00000a7a      90             nop
+|           0x00000a7b      5d             pop rbp
+\           0x00000a7c      c3             ret
+[0x00000d70]> pdf @ fcn.00000f12 
+            ;-- section_end..text:
+            ;-- section.c0de:
+/ (fcn) fcn.00000f12 2
+|   fcn.00000f12 ();
+|           ; DATA XREF from sub.getpagesize_cc2 (0xcde)
+|           ; CALL XREFS from main (0xd82, 0xddd, 0xde9)
+|           ; DATA XREF from entry2.init (0xe0f)
+\           0x00000f12      1c65           sbb al, 0x65                ; [15] -r-x section size 101 named c0de
+[0x00000d70]> 
+
+Mmmm, the second one does not seem to be valid code, so probably the first one is deofuscating it before calling.
+
+The first one seems to be xoring the data in rdi with the 4 bytes chunk of the flag, for number of bytes indicated by rsi.
+
+Since we expect fcn.00000f12 to be a normal function, it may have the usual preamble.  If so, we can guess the 4 bytes of the flag because they will xor with actual bytes to get that preamble.  Let's try...
+
+We can see the expected preamble and the bytes we got right now in fcn.00000f12:
+
+[0x00000d70]> px 4 @fcn.00000a0e
+- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0x00000a0e  5548 89e5                                UH..
+[0x00000d70]> px 4 @fcn.00000f12
+- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0x00000f12  1c65 c5c4                                .e..
+[0x00000d70]> pxw 4 @fcn.00000a0e
+0x00000a0e  0xe5894855                                   UH..
+[0x00000d70]> pxwq 4 @fcn.00000a0e
+0x00000a0e  0xe5894855                                   UH..
+
+Getting both chunks as parameters with backticks, we print the xor of both of them.  Probably there are simplest and cleaner ways to do this.
+TODO: Learn to use variables to make things cleaner.
+
+[0x00000d70]> ? `pxw 4 @fcn.00000a0e~[1]` ^ `pxw 4 @fcn.00000f12~[1]`
+hex     0x214c2d49
+octal   04123026511
+unit    532.8M
+segment 214c000:0d49
+int32   558640457
+string  "I-L!"
+binary  0b00100001010011000010110101001001
+fvalue: 3301270812.0
+float:  0.000000f
+double: 0.000000
+trits   0t1102221011212122022
+
+We get printable bytes, so hopefully we are right.  Let's decode the function to see if it has meaning.
+
+Since we did not open the file in write mode, because we don't want to alter it, we have to enable the io cache to be able to modify it in our copy in memory.
+
+[0x00000d70]> e io.cache = true
+
+We set block size to the size we want to modify to control the block affected by next instruction.
+TODO: Can I do this in the command, not using block?
+
+[0x00000d70]> b 0x65
+
+And finally we can xor the buffer with the expected 4 bytes (previous hex reversed because of endianness).
+
+[0x00000d70]> wox 492d4c21 @ fcn.00000f12 
+
+Let's see what we got:
+
+[0x00000d70]> s fcn.00000f12
+[0x00000f12]> pdi 25
+0x00000f12    fcn.00000f12:
+0x00000f12                   55  push rbp
+0x00000f13               4889e5  mov rbp, rsp
+0x00000f16             4883ec10  sub rsp, 0x10
+0x00000f1a           b800000000  mov eax, 0
+0x00000f1f           e8b2faffff  call fcn.000009d6
+0x00000f24       0fb605e6102000  movzx eax, byte [rip + 0x2010e6]
+0x00000f2b               0fbec0  movsx eax, al
+0x00000f2e       488d1518112000  lea rdx, [rip + 0x201118]
+0x00000f35                 89c6  mov esi, eax
+0x00000f37       488d3d3cfdffff  lea rdi, [rip - 0x2c4]
+0x00000f3e           e8cbfaffff  call fcn.00000a0e
+0x00000f43       488d3530fdffff  lea rsi, [rip - 0x2d0]
+0x00000f4a           bf02000000  mov edi, 2
+0x00000f4f           e8ecf8ffff  call sym.imp.signal
+0x00000f54       c745fc01000000  mov dword [rbp - 4], 1
+0x00000f5b                 eb0e  jmp 0xf6b
+0x00000f5d           bf02000000  mov edi, 2
+0x00000f62           e869f8ffff  call sym.imp.raise
+0x00000f67             8345fc01  add dword [rbp - 4], 1
+0x00000f6b       817dfcff030000  cmp dword [rbp - 4], 0x3ff
+0x00000f72                 7ee9  jle 0xf5d
+0x00000f74                   90  nop
+0x00000f75                   c9  leave
+0x00000f76                   c3  ret
+0x00000f77    section_end.c0de:
+0x00000f77               004883  add byte [rax - 0x7d], cl
+
+TODO: af-;af will reanalyze the code and reconstruct the relative references.  Should redo it that way.
+
+We can see something similar going on, since we see that it's calling functions to read 4 more bytes of the flag and use them to xor a new buffer.  This time instead of calling the function, it's setting it as the handler for a signal and calling the signal.
+
+Since I don't know how to make r2 not to handle the signal itself (https://github.com/radare/radare2/issues/8749), I decide to continue doing the analysis statically.
+
+Those references from rip are relative jumps and similar, and in x86-64 are references from the next instruction address, so we can see that rip+0x201118 in 0xf2e is 0x20204d, which was the address of the 4 bytes from the input.
+
+[0x00000f12]> ? 0xf35 + 0x201118
+hex     0x20204d
+octal   010020115
+unit    2M
+segment 20000:004d
+int32   2105421
+string  "M  "
+binary  0b001000000010000001001101
+fvalue: 2105421.0
+float:  0.000000f
+double: 0.000000
+trits   0t10221222002120
+
+In the same way, rip + 0x2010e6 in 0xf24 is 0x202011.
+
+[0x00000f12]> ? 0xf2b + 0x2010e6
+hex     0x202011
+octal   010020021
+unit    2M
+segment 20000:0011
+int32   2105361
+string  "\x11  "
+binary  0b001000000010000000010001
+fvalue: 2105361.0
+float:  0.000000f
+double: 0.000000
+trits   0t10221222000100
+
+This is the second byte in str.eHHHHH\x1f, so we guess that this process will repeat several times and those will be the block sizes for each iteration.  So we will probably have 7 blocks.
+
+[0x00000f12]> px 80@0x202011
+- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0x00202011  4848 4848 481f 0000 0000 0000 0000 0000  HHHHH...........
+0x00202021  0000 0000 0000 0000 0000 0000 0000 0000  ................
+0x00202031  0000 0000 0000 0000 0000 0000 0000 0000  ................
+0x00202041  0000 0000 0000 0000 0000 0000 0000 0000  ................
+0x00202051  0000 0000 0000 00ff ffff ffff ffff ffff  ................
+
+Finally, as expected, same reference in two places for the next buffer.
+
+[0x00000f12]> ? 0x0f3e - 0x2c4
+hex     0xc7a
+octal   06172
+unit    3.1K
+segment 0000:0c7a
+int32   3194
+string  "z\f"
+binary  0b0000110001111010
+fvalue: 3194.0
+float:  0.000000f
+double: 0.000000
+trits   0t11101022
+
+[0x00000f12]> ? 0x0f4a - 0x2d0
+hex     0xc7a
+octal   06172
+unit    3.1K
+segment 0000:0c7a
+int32   3194
+string  "z\f"
+binary  0b0000110001111010
+fvalue: 3194.0
+float:  0.000000f
+double: 0.000000
+trits   0t11101022
+
+We find the next 4 bytes of the key assuming we will find a preamble.
+
+[0x00000f12]> ? `pxw 4 @fcn.00000a0e~[1]` ^ `pxw 4 @0xc7a~[1]`
+hex     0x773d336b
+octal   016717231553
+unit    1.9G
+segment 773d000:036b
+int32   2000499563
+string  "k3=w"
+binary  0b01110111001111010011001101101011
+fvalue: 2461301566.0
+float:  3837449166274444075265654786097152.000000f
+double: 0.000000
+trits   0t12011102021220111102
+
+Change block size according to str.eHHHHH\x1f, xor the buffer and disassemble the instructions found.
+
+[0x00000f12]> b 0x48
+[0x00000f12]> wox 6b333d77 @ 0xc7a
+[0x00000f12]> pdi 20 @0xc7a
+0x00000c7a                   55  push rbp
+0x00000c7b               4889e5  mov rbp, rsp
+0x00000c7e             4883ec10  sub rsp, 0x10
+0x00000c82               897dfc  mov dword [rbp - 4], edi
+0x00000c85           b800000000  mov eax, 0
+0x00000c8a           e847fdffff  call fcn.000009d6
+0x00000c8f       0fb6057c132000  movzx eax, byte [rip + 0x20137c]
+0x00000c96               0fbec0  movsx eax, al
+0x00000c99       488d15ad132000  lea rdx, [rip + 0x2013ad]
+0x00000ca0                 89c6  mov esi, eax
+0x00000ca2       488d3d89ffffff  lea rdi, [rip - 0x77]
+0x00000ca9           e860fdffff  call fcn.00000a0e
+0x00000cae       488d357dffffff  lea rsi, [rip - 0x83]
+0x00000cb5           bf02000000  mov edi, 2
+0x00000cba           e881fbffff  call sym.imp.signal
+0x00000cbf                   90  nop
+0x00000cc0                   c9  leave
+0x00000cc1                   c3  ret
+0x00000cc2                   55  push rbp
+0x00000cc3               4889e5  mov rbp, rsp
+
+We repeat the same process for all the blocks, taking note of the xor keys used.
+TODO: Look for a way to automate this process a bit.
+
+[0x00000f12]> ? 0xca9 - 0x77
+hex     0xc32
+octal   06062
+unit    3K
+segment 0000:0c32
+int32   3122
+string  "2\f"
+binary  0b0000110000110010
+fvalue: 3122.0
+float:  0.000000f
+double: 0.000000
+trits   0t11021122
+[0x00000f12]> ? `pxw 4 @fcn.00000a0e~[1]` ^ `pxw 4 @0xc32~[1]`
+hex     0x5f746168
+octal   013735060550
+unit    1.5G
+segment 5f74000:0168
+int32   1601462632
+string  "hat_"
+binary  0b01011111011101000110000101101000
+fvalue: 3137153341.0
+float:  17609470367204638720.000000f
+double: 0.000000
+trits   0t11010121102201201211
+[0x00000f12]> wox 6861745f @ 0xc32
+[0x00000f12]> pdi 20 @0xc32
+0x00000c32                   55  push rbp
+0x00000c33               4889e5  mov rbp, rsp
+0x00000c36             4883ec10  sub rsp, 0x10
+0x00000c3a               897dfc  mov dword [rbp - 4], edi
+0x00000c3d           b800000000  mov eax, 0
+0x00000c42           e88ffdffff  call fcn.000009d6
+0x00000c47       0fb605c5132000  movzx eax, byte [rip + 0x2013c5]
+0x00000c4e               0fbec0  movsx eax, al
+0x00000c51       488d15f5132000  lea rdx, [rip + 0x2013f5]
+0x00000c58                 89c6  mov esi, eax
+0x00000c5a       488d3d89ffffff  lea rdi, [rip - 0x77]
+0x00000c61           e8a8fdffff  call fcn.00000a0e
+0x00000c66       488d357dffffff  lea rsi, [rip - 0x83]
+0x00000c6d           bf02000000  mov edi, 2
+0x00000c72           e8c9fbffff  call sym.imp.signal
+0x00000c77                   90  nop
+0x00000c78                   c9  leave
+0x00000c79                   c3  ret
+0x00000c7a                   55  push rbp
+0x00000c7b               4889e5  mov rbp, rsp
+[0x00000f12]> ? 0xc61 - 0x77
+hex     0xbea
+octal   05752
+unit    3.0K
+segment 0000:0bea
+int32   3050
+string  "\xea\v"
+binary  0b0000101111101010
+fvalue: 3050.0
+float:  0.000000f
+double: 0.000000
+trits   0t11011222
+[0x00000f12]> ? `pxw 4 @fcn.00000a0e~[1]` ^ `pxw 4 @0xbea~[1]`
+hex     0x2d553079
+octal   05525230171
+unit    725.3M
+segment 2d55000:0079
+int32   760557689
+string  "y0U-"
+binary  0b00101101010101010011000001111001
+fvalue: 3369891884.0
+float:  0.000000f
+double: 0.000000
+trits   0t1222000010100000022
+[0x00000f12]> wox 7930552d @ 0xbea
+[0x00000f12]> pdi 20 @0xbea
+0x00000bea                   55  push rbp
+0x00000beb               4889e5  mov rbp, rsp
+0x00000bee             4883ec10  sub rsp, 0x10
+0x00000bf2               897dfc  mov dword [rbp - 4], edi
+0x00000bf5           b800000000  mov eax, 0
+0x00000bfa           e8d7fdffff  call fcn.000009d6
+0x00000bff       0fb6050e142000  movzx eax, byte [rip + 0x20140e]
+0x00000c06               0fbec0  movsx eax, al
+0x00000c09       488d153d142000  lea rdx, [rip + 0x20143d]
+0x00000c10                 89c6  mov esi, eax
+0x00000c12       488d3d89ffffff  lea rdi, [rip - 0x77]
+0x00000c19           e8f0fdffff  call fcn.00000a0e
+0x00000c1e       488d357dffffff  lea rsi, [rip - 0x83]
+0x00000c25           bf02000000  mov edi, 2
+0x00000c2a           e811fcffff  call sym.imp.signal
+0x00000c2f                   90  nop
+0x00000c30                   c9  leave
+0x00000c31                   c3  ret
+0x00000c32                   55  push rbp
+0x00000c33               4889e5  mov rbp, rsp
+[0x00000f12]> ? 0xc19 - 0x77
+hex     0xba2
+octal   05642
+unit    2.9K
+segment 0000:0ba2
+int32   2978
+string  "\xa2\v"
+binary  0b0000101110100010
+fvalue: 2978.0
+float:  0.000000f
+double: 0.000000
+trits   0t11002022
+[0x00000f12]> ? `pxw 4 @fcn.00000a0e~[1]` ^ `pxw 4 @0xba2~[1]`
+hex     0x21746f47
+octal   04135067507
+unit    535.3M
+segment 2174000:0f47
+int32   561278791
+string  "Got!"
+binary  0b00100001011101000110111101000111
+fvalue: 3304924946.0
+float:  0.000000f
+double: 0.000000
+trits   0t1110010010220202101
+[0x00000f12]> wox 476f7421 @ 0xba2
+[0x00000f12]> pdi 20 @0xba2
+0x00000ba2                   55  push rbp
+0x00000ba3               4889e5  mov rbp, rsp
+0x00000ba6             4883ec10  sub rsp, 0x10
+0x00000baa               897dfc  mov dword [rbp - 4], edi
+0x00000bad           b800000000  mov eax, 0
+0x00000bb2           e81ffeffff  call fcn.000009d6
+0x00000bb7       0fb60557142000  movzx eax, byte [rip + 0x201457]
+0x00000bbe               0fbec0  movsx eax, al
+0x00000bc1       488d1585142000  lea rdx, [rip + 0x201485]
+0x00000bc8                 89c6  mov esi, eax
+0x00000bca       488d3d89ffffff  lea rdi, [rip - 0x77]
+0x00000bd1           e838feffff  call fcn.00000a0e
+0x00000bd6       488d357dffffff  lea rsi, [rip - 0x83]
+0x00000bdd           bf02000000  mov edi, 2
+0x00000be2           e859fcffff  call sym.imp.signal
+0x00000be7                   90  nop
+0x00000be8                   c9  leave
+0x00000be9                   c3  ret
+0x00000bea                   55  push rbp
+0x00000beb               4889e5  mov rbp, rsp
+[0x00000f12]> ? 0xbd1 - 0x77
+hex     0xb5a
+octal   05532
+unit    2.8K
+segment 0000:0b5a
+int32   2906
+string  "Z\v"
+binary  0b0000101101011010
+fvalue: 2906.0
+float:  0.000000f
+double: 0.000000
+trits   0t10222122
+[0x00000f12]> pdi 25 @ 0xb5a
+0x00000b5a               1278b9  adc bh, byte [rax - 0x47]
+0x00000b5d   a10fb3dc54ce4dccfc  movabs eax, dword [0xfccc4dce54dcb30f]
+0x00000b66               473030  xor byte [r8], r14b
+0x00000b69                 44af  scasd eax, dword [rdi]
+0x00000b6b                   57  push rdi
+0x00000b6c                   ce  invalid
+0x00000b6d           bbb83f8641  mov ebx, 0x41863fb8
+0x00000b72                 e724  out 0x24, eax
+0x00000b74             1044488e  adc byte [rax + rcx*2 - 0x72], al
+0x00000b78                   f0  invalid
+0x00000b79                 0cca  or al, 0xca
+0x00000b7b           25fd506730  and eax, 0x306750fd
+0x00000b80           b9820fbd0d  mov ecx, 0xdbd0f82
+0x00000b85         f6b8cfcfacc7  idiv byte [rax - 0x38533031]
+0x00000b8b                   ce  invalid
+0x00000b8c                   cf  iretd
+0x00000b8d           bb0fbd05e2  mov ebx, 0xe205bd0f
+0x00000b92           b8cfcffb45  mov eax, 0x45fbcfcf
+0x00000b97                 3030  xor byte [rax], dh
+0x00000b99                 44af  scasd eax, dword [rdi]
+0x00000b9b                   91  xchg eax, ecx
+0x00000b9c                   cc  int3
+0x00000b9d           bbb8a0f987  mov ebx, 0x87f9a0b8
+0x00000ba2                   55  push rbp
+0x00000ba3               4889e5  mov rbp, rsp
+[0x00000f12]> ? 0xbd1 - 0x77
+hex     0xb5a
+octal   05532
+unit    2.8K
+segment 0000:0b5a
+int32   2906
+string  "Z\v"
+binary  0b0000101101011010
+fvalue: 2906.0
+float:  0.000000f
+double: 0.000000
+trits   0t10222122
+[0x00000f12]> ? `pxw 4 @fcn.00000a0e~[1]` ^ `pxw 4 @0xb5a~[1]`
+hex     0x44303047
+octal   010414030107
+unit    1G
+segment 4430000:0047
+int32   1144008775
+string  "G00D"
+binary  0b01000100001100000011000001000111
+fvalue: 2713286674.0
+float:  704.754333f
+double: 0.000000
+trits   0t2221201122200000101
+[0x00000f12]> wox 47303044 @ 0xb5a
+[0x00000f12]> pdi 20 @ 0xb5a
+0x00000b5a                   55  push rbp
+0x00000b5b               4889e5  mov rbp, rsp
+0x00000b5e             4883ec10  sub rsp, 0x10
+0x00000b62               897dfc  mov dword [rbp - 4], edi
+0x00000b65           b800000000  mov eax, 0
+0x00000b6a           e867feffff  call fcn.000009d6
+0x00000b6f       0fb605a0142000  movzx eax, byte [rip + 0x2014a0]
+0x00000b76               0fbec0  movsx eax, al
+0x00000b79       488d15cd142000  lea rdx, [rip + 0x2014cd]
+0x00000b80                 89c6  mov esi, eax
+0x00000b82       488d3db2ffffff  lea rdi, [rip - 0x4e]
+0x00000b89           e880feffff  call fcn.00000a0e
+0x00000b8e       488d35a6ffffff  lea rsi, [rip - 0x5a]
+0x00000b95           bf02000000  mov edi, 2
+0x00000b9a           e8a1fcffff  call sym.imp.signal
+0x00000b9f                   90  nop
+0x00000ba0                   c9  leave
+0x00000ba1                   c3  ret
+0x00000ba2                   55  push rbp
+0x00000ba3               4889e5  mov rbp, rsp
+[0x00000f12]> ? 0xb89 -0x4e
+hex     0xb3b
+octal   05473
+unit    2.8K
+segment 0000:0b3b
+int32   2875
+string  ";\v"
+binary  0b0000101100111011
+fvalue: 2875.0
+float:  0.000000f
+double: 0.000000
+trits   0t10221111
+[0x00000f12]> px 8 @ str.eHHHHH 
+- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0x00202010  6548 4848 4848 1f00                      eHHHHH..
+[0x00000f12]> b 0x1f
+[0x00000f12]> ? `pxw 4 @fcn.00000a0e~[1]` ^ `pxw 4 @0xb3b~[1]`
+hex     0x424f4a5f
+octal   010223645137
+unit    1G
+segment 424f000:0a5f
+int32   1112492639
+string  "_JOB"
+binary  0b01000010010011110100101001011111
+fvalue: 2814771722.0
+float:  51.822628f
+double: 0.000000
+trits   0t2212112100111000002
+[0x00000f12]> wox 5f4a4f42 @ 0xb3b
+[0x00000f12]> pdi 15 @0xb3b
+0x00000b3b                   55  push rbp
+0x00000b3c               4889e5  mov rbp, rsp
+0x00000b3f             4883ec10  sub rsp, 0x10
+0x00000b43               897dfc  mov dword [rbp - 4], edi
+0x00000b46           b800000000  mov eax, 0
+0x00000b4b           e82dffffff  call 0xa7d
+0x00000b50           bf01000000  mov edi, 1
+0x00000b55           e816fdffff  call sym.imp.exit
+0x00000b5a                   55  push rbp
+0x00000b5b               4889e5  mov rbp, rsp
+0x00000b5e             4883ec10  sub rsp, 0x10
+0x00000b62               897dfc  mov dword [rbp - 4], edi
+0x00000b65           b800000000  mov eax, 0
+0x00000b6a           e867feffff  call fcn.000009d6
+0x00000b6f       0fb605a0142000  movzx eax, byte [rip + 0x2014a0]
+
+The last cyphered block calls the good boy function.  We can read the string constructed in the stack in the comments.
+
+[0x00000f12]> s 0xa7d
+[0x00000a7d]> af
+[0x00000a7d]> pdf
+/ (fcn) fcn.00000a7d 190
+|   fcn.00000a7d ();
+|           ; var int local_30h @ rbp-0x30
+|           ; var int local_2fh @ rbp-0x2f
+|           ; var int local_2eh @ rbp-0x2e
+|           ; var int local_2dh @ rbp-0x2d
+|           ; var int local_2ch @ rbp-0x2c
+|           ; var int local_2bh @ rbp-0x2b
+|           ; var int local_2ah @ rbp-0x2a
+|           ; var int local_29h @ rbp-0x29
+|           ; var int local_28h @ rbp-0x28
+|           ; var int local_27h @ rbp-0x27
+|           ; var int local_26h @ rbp-0x26
+|           ; var int local_25h @ rbp-0x25
+|           ; var int local_24h @ rbp-0x24
+|           ; var int local_23h @ rbp-0x23
+|           ; var int local_22h @ rbp-0x22
+|           ; var int local_21h @ rbp-0x21
+|           ; var int local_20h @ rbp-0x20
+|           ; var int local_1fh @ rbp-0x1f
+|           ; var int local_1eh @ rbp-0x1e
+|           ; var int local_1dh @ rbp-0x1d
+|           ; var int local_1ch @ rbp-0x1c
+|           ; var int local_1bh @ rbp-0x1b
+|           ; var int local_1ah @ rbp-0x1a
+|           ; var int local_19h @ rbp-0x19
+|           ; var int local_18h @ rbp-0x18
+|           ; var int local_17h @ rbp-0x17
+|           ; var int local_16h @ rbp-0x16
+|           ; var int local_15h @ rbp-0x15
+|           ; var int local_14h @ rbp-0x14
+|           ; var int local_13h @ rbp-0x13
+|           ; var int local_8h @ rbp-0x8
+|           0x00000a7d      55             push rbp
+|           0x00000a7e      4889e5         mov rbp, rsp
+|           0x00000a81      4883ec30       sub rsp, 0x30               ; '0'
+|           0x00000a85      64488b042528.  mov rax, qword fs:[0x28]    ; [0x28:8]=0x2130 ; '('
+|           0x00000a8e      488945f8       mov qword [local_8h], rax
+|           0x00000a92      31c0           xor eax, eax
+|           0x00000a94      c645d043       mov byte [local_30h], 0x43  ; 'C'
+|           0x00000a98      c645d16f       mov byte [local_2fh], 0x6f  ; 'o'
+|           0x00000a9c      c645d26e       mov byte [local_2eh], 0x6e  ; 'n'
+|           0x00000aa0      c645d367       mov byte [local_2dh], 0x67  ; 'g'
+|           0x00000aa4      c645d472       mov byte [local_2ch], 0x72  ; 'r'
+|           0x00000aa8      c645d561       mov byte [local_2bh], 0x61  ; 'a'
+|           0x00000aac      c645d674       mov byte [local_2ah], 0x74  ; 't'
+|           0x00000ab0      c645d77a       mov byte [local_29h], 0x7a  ; 'z'
+|           0x00000ab4      c645d821       mov byte [local_28h], 0x21  ; '!'
+|           0x00000ab8      c645d920       mov byte [local_27h], 0x20  ; "@"
+|           0x00000abc      c645da59       mov byte [local_26h], 0x59  ; 'Y'
+|           0x00000ac0      c645db6f       mov byte [local_25h], 0x6f  ; 'o'
+|           0x00000ac4      c645dc75       mov byte [local_24h], 0x75  ; 'u'
+|           0x00000ac8      c645dd20       mov byte [local_23h], 0x20  ; "@"
+|           0x00000acc      c645de67       mov byte [local_22h], 0x67  ; 'g'
+|           0x00000ad0      c645df6f       mov byte [local_21h], 0x6f  ; 'o'
+|           0x00000ad4      c645e074       mov byte [local_20h], 0x74  ; 't'
+|           0x00000ad8      c645e120       mov byte [local_1fh], 0x20  ; "@"
+|           0x00000adc      c645e274       mov byte [local_1eh], 0x74  ; 't'
+|           0x00000ae0      c645e368       mov byte [local_1dh], 0x68  ; 'h'
+|           0x00000ae4      c645e465       mov byte [local_1ch], 0x65  ; 'e'
+|           0x00000ae8      c645e520       mov byte [local_1bh], 0x20  ; "@"
+|           0x00000aec      c645e666       mov byte [local_1ah], 0x66  ; 'f'
+|           0x00000af0      c645e76c       mov byte [local_19h], 0x6c  ; 'l'
+|           0x00000af4      c645e861       mov byte [local_18h], 0x61  ; 'a'
+|           0x00000af8      c645e967       mov byte [local_17h], 0x67  ; 'g'
+|           0x00000afc      c645ea20       mov byte [local_16h], 0x20  ; "@"
+|           0x00000b00      c645eb3a       mov byte [local_15h], 0x3a  ; ':'
+|           0x00000b04      c645ec29       mov byte [local_14h], 0x29  ; ')'
+|           0x00000b08      c645ed00       mov byte [local_13h], 0
+|           0x00000b0c      488d45d0       lea rax, [local_30h]
+|           0x00000b10      4889c6         mov rsi, rax
+|           0x00000b13      488d3dd40500.  lea rdi, str.s              ; 0x10ee ; "%s\n\n"
+|           0x00000b1a      b800000000     mov eax, 0
+|           0x00000b1f      e8ecfcffff     call sym.imp.printf         ; int printf(const char *format)
+|           0x00000b24      90             nop
+|           0x00000b25      488b45f8       mov rax, qword [local_8h]
+|           0x00000b29      644833042528.  xor rax, qword fs:[0x28]
+|       ,=< 0x00000b32      7405           je 0xb39
+|       |   0x00000b34      e8c7fcffff     call sym.imp.__stack_chk_fail ; void __stack_chk_fail(void)
+|       `-> 0x00000b39      c9             leave
+\           0x00000b3a      c3             ret
+[0x00000a7d]> 
+
+
+So, we concat all the xor keys used to get the flag:
+I-L!k3=what_y0U-Got!G00D_JOB
+
+
+We check that it really works:
+
+[0x00000a7d]> !./disqualified_6144fa7e73cf0337215b60737fb2384b.bin
+ _____  ___   _____ ____  _   _ ___   ___  __  ___  
+|  __ \|__ \ / ____/ __ \| \ | |__ \ / _ \/_ |/ _ \ 
+| |__) |  ) | |   | |  | |  \| |  ) | | | || | (_) |
+|  _  /  / /| |   | |  | | . ` | / /| | | || |> _ < 
+| | \ \ / /_| |___| |__| | |\  |/ /_| |_| || | (_) |
+|_|  \_\____|\_____\____/|_| \_|____|\___/ |_|\___/ 
+
+	 	by Megabeets
+
+Show me what you got: I-L!k3=what_y0U-Got!G00D_JOB
+Congratz! You got the flag :)
+
+[0x00000a7d]> 
+
+So the flag for the console is r2con{I-L!k3=what_y0U-Got!G00D_JOB}
+
+Finally, just for the w0pr_team, we exit radare xDDD:
+
+[0x00000a7d]> q
+
+Thanks to all the radare family for the trainings, conference and competitions!
+ramandi
