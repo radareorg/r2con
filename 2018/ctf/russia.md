@@ -1,5 +1,5 @@
 # r2con CTF, 2018
-Author: Kirils Solovjovs, kirils.org
+Author: Kirils Solovjovs, http://kirils.org
 
 ## Challenge: Russia
 Welcome to our new r2 database!
@@ -188,8 +188,10 @@ binary.elf: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically 
 
 ### Step 3: Find the flag
 
-The easy way - looking for something that looks like a flag, but applying different flagmasks.
+The easy way - looking for something that looks like a flag by applying different flagmasks.
+
 $ `strings ctf_challenge.elf.ext|grep -E "^[^_]+_[^_]+_[^_]+_.*"`
+
 This gives 109 strings one of which is "you_win_the_day_wooooooot".
 Try to submit the flag. It doesn't work.
 
