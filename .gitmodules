@@ -13,3 +13,6 @@
 [submodule "r2con2020"]
 	path = r2con2020
 	url = https://github.com/radareorg/r2con2020
+[submodule "r2con2024"]
+	path = r2con2024
+	url = https://github.com/radareorg/r2con2024
